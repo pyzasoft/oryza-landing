@@ -151,7 +151,7 @@ const OryzaLanding = () => {
         href="https://wa.me/+8801700000000"
         target="_blank"
         rel="noopener"
-        className="fixed bottom-6 right-6 z-50 btn btn-primary shadow-2xl"
+        className="fixed bottom-6 right-6 z-50 btn btn-whatsapp btn-lg shadow-2xl"
       >
         Chat on WhatsApp
       </a>
@@ -173,7 +173,7 @@ const OryzaLanding = () => {
               <a href="#ai-demo" className="text-gray-300 hover:text-green-400 font-medium">AI Demo</a>
               <a href="#features" className="text-gray-300 hover:text-green-400 font-medium">Features</a>
               {/* <a href="#pricing" className="text-gray-300 hover:text-green-400 font-medium">Pricing</a> */}
-              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-primary">
+              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-whatsapp">
                 WhatsApp Us
               </a>
             </div>
@@ -187,7 +187,7 @@ const OryzaLanding = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto">
             {/* New Launch Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-700 text-green-300 rounded-full mb-6">
               <Zap className="w-4 h-4 mr-2" />
@@ -235,13 +235,13 @@ const OryzaLanding = () => {
               </div>
               
               <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Complete</div>
                 <div className="text-sm text-gray-300">End-to-End Management</div>
-                <div className="mt-2 w-full bg-purple-900/40 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-full"></div>
+                <div className="mt-2 w-full bg-teal-900/40 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full w-full"></div>
                 </div>
               </div>
               
@@ -259,21 +259,21 @@ const OryzaLanding = () => {
 
             {/* Key Metrics */}
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
+                <div className="text-center">
                 <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">9+</div>
-                <div className="text-gray-600 font-medium">Core Features</div>
+                <div className="text-gray-400 font-medium">Core Features</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">6+</div>
-                <div className="text-gray-600 font-medium">Courier Partners</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">6+</div>
+                <div className="text-gray-400 font-medium">Courier Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">24/7</div>
-                <div className="text-gray-600 font-medium">Real-time Monitoring</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent mb-2">24/7</div>
+                <div className="text-gray-400 font-medium">Real-time Monitoring</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent mb-2">100%</div>
-                <div className="text-gray-600 font-medium">Bangladesh Built</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent mb-2">100%</div>
+                <div className="text-gray-400 font-medium">Bangladesh Built</div>
               </div>
             </div>
           </div>
@@ -348,8 +348,8 @@ const OryzaLanding = () => {
               <p className="text-xs text-gray-300">Assign orders to members</p>
             </div>
             
-            <div className="group bg-gradient-to-br from-purple-950/40 to-purple-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-purple-900/30">
-              <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+            <div className="group bg-gradient-to-br from-teal-950/40 to-teal-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-teal-900/30">
+              <TrendingUp className="w-8 h-8 text-teal-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-bold text-white text-sm mb-1">Order Lifecycle</h3>
               <p className="text-xs text-gray-300">End-to-end tracking</p>
             </div>
@@ -384,8 +384,8 @@ const OryzaLanding = () => {
               <p className="text-xs text-gray-300">Multiple courier assign</p>
             </div>
             
-            <div className="group bg-gradient-to-br from-pink-950/40 to-pink-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-pink-900/30">
-              <Users className="w-8 h-8 text-pink-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+            <div className="group bg-gradient-to-br from-emerald-950/40 to-emerald-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-emerald-900/30">
+              <Users className="w-8 h-8 text-emerald-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-bold text-white text-sm mb-1">Customer History</h3>
               <p className="text-xs text-gray-300">Complete order records</p>
             </div>
@@ -680,7 +680,7 @@ const OryzaLanding = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-white btn-lg font-bold">Start Free Trial</a>
+              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Start Free Trial</a>
               <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a>
             </div>
 
@@ -717,19 +717,18 @@ const OryzaLanding = () => {
             </div>
             
             <div className="flex space-x-4">
-              <a href="https://facebook.com/pyzasoft" className="p-3 bg-gray-900 rounded-full hover:bg-blue-600 transition-colors border border-gray-800">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <a href="https://facebook.com/pyzasoft" className="p-3 bg-gray-900 rounded-full hover:bg-blue-600 transition-colors border border-gray-800" aria-label="Facebook">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22.675 0h-21.35C.595 0 0 .595 0 1.326v21.348C0 23.405.595 24 1.326 24h11.495v-9.294H9.691V11.09h3.13V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.312h3.59l-.467 3.616h-3.123V24h6.127C23.405 24 24 23.405 24 22.674V1.326C24 .595 23.405 0 22.675 0z"/>
                 </svg>
               </a>
-              <a href="https://wa.me/+8801700000000" className="p-3 bg-gray-900 rounded-full hover:bg-green-600 transition-colors border border-gray-800">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 16.878c-.248.693-.984 1.298-1.615 1.471-.427.116-.982.21-2.86-.612-2.406-1.053-4.46-3.868-4.595-4.045-.134-.177-1.096-1.459-1.096-2.784 0-1.325.693-1.977 .94-2.247.248-.27.54-.336.72-.336l.52.007c.167.006.39-.063.61.468.224.531.761 1.861.828 1.996.068.135.113.293.023.471-.09.177-.135.289-.27.446-.134.156-.283.35-.404.47-.123.119-.25.247-.108.494.143.248.636 1.049 1.367 1.698.945.842 1.742 1.103 1.99 1.227.247.124.392.103.536-.074.146-.177.614-.715.777-.962.164-.248.328-.208.551-.124.224.083 1.417.668 1.66.79.243.123.405.184.462.285.057.101.057.579-.19 1.272z"/>
+              <a href="https://wa.me/+8801700000000" className="p-3 bg-gray-900 rounded-full hover:bg-[#25D366] transition-colors border border-gray-800" aria-label="WhatsApp">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.52 3.48A11.94 11.94 0 0012 .04C5.37.04.02 5.39.02 12.03c0 2.12.56 4.19 1.63 6.01L.05 24l6.12-1.6a12.02 12.02 0 005.83 1.51h.01c6.63 0 12-5.36 12-11.97a11.93 11.93 0 00-3.49-8.46zM12 21.5h-.01a9.46 9.46 0 01-4.82-1.32l-.35-.2-3.63.95.97-3.54-.22-.36a9.45 9.45 0 01-1.46-5.04c0-5.22 4.26-9.48 9.5-9.48a9.45 9.45 0 016.72 2.78 9.42 9.42 0 012.79 6.7c0 5.22-4.26 9.48-9.5 9.48zm5.48-7.17c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.94 1.16-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.49.71.3 1.26.48 1.7.62.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42z"/>
                 </svg>
               </a>
-              <a href="mailto:hello@pyzasoft.com" className="p-3 bg-gray-900 rounded-full hover:bg-red-600 transition-colors border border-gray-800">
-                <Mail className="w-5 h-5" />
+              <a href="mailto:hello@pyzasoft.com" className="p-3 bg-gray-900 rounded-full hover:bg-red-600 transition-colors border border-gray-800" aria-label="Email">
+                <Mail className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>

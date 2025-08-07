@@ -17,11 +17,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: inherit;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: inherit;
 }
 
 body {
@@ -45,19 +45,22 @@ h1 {
     @apply px-7 py-3 text-lg;
   }
   .btn-primary {
-    @apply bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-md hover:from-green-500 hover:to-blue-500 hover:shadow-xl focus-visible:ring-green-200;
+    @apply bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg shadow-green-900/20 hover:from-green-500 hover:to-blue-500 hover:shadow-green-700/30 focus-visible:ring-4 focus-visible:ring-green-500/30;
   }
   .btn-secondary {
     @apply bg-gray-800 text-gray-100 border border-gray-700 hover:border-green-400 hover:text-white;
   }
   .btn-outline {
-    @apply bg-transparent text-gray-200 border-2 border-gray-700 hover:border-green-500 hover:text-green-400;
+    @apply bg-transparent text-white border-2 border-gray-600 hover:border-green-500 hover:bg-white/10;
   }
   .btn-white {
     @apply bg-white text-blue-700 hover:bg-gray-100 shadow;
   }
   .btn-outline-white {
-    @apply bg-transparent text-white border-2 border-white hover:bg-white hover:text-blue-700;
+    @apply bg-transparent text-white border-2 border-white hover:bg-white/10;
+  }
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white hover:bg-[#1ebe57] shadow-md;
   }
 }
 
