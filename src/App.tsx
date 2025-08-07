@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
-  ChevronRight, Package, Users, TrendingUp, BarChart3, Truck, FileText, Brain, 
-  Shield, Zap, CheckCircle, Star, ArrowRight, Menu, X, Phone, Mail, MessageCircle,
-  AlertTriangle, Clock, DollarSign, Target, Eye, PlayCircle, Quote, Bot, 
-  PieChart, LineChart, Search, Calculator, Database
+  Package, Users, TrendingUp, BarChart3, Truck, FileText, 
+  Shield, Zap, CheckCircle, Menu, X, Mail,
+  AlertTriangle, Clock, DollarSign, Quote, Bot, 
+  PieChart, Search, Database
 } from 'lucide-react';
 
 const OryzaLanding = () => {
@@ -59,38 +59,65 @@ const OryzaLanding = () => {
     { 
       icon: Bot, 
       title: "AI Business Intelligence", 
-      desc: "Ask questions in natural language, get instant charts and data tables with real insights.",
-      highlight: true
+      desc: "Ask questions in natural language and get instant charts, insights, and analytics about your business performance, sales trends, and profitability.",
+      highlight: true,
+      category: "AI & Analytics"
     },
     { 
       icon: Package, 
-      title: "Smart Order Management", 
-      desc: "WooCommerce integration with automated order processing and tracking.",
-      highlight: false
-    },
-    { 
-      icon: TrendingUp, 
-      title: "Real-time Profit Tracking", 
-      desc: "Know your profit margins instantly for every product and order.",
-      highlight: false
-    },
-    { 
-      icon: Truck, 
-      title: "Multi-Courier Integration", 
-      desc: "Connect with Pathao, RedX, SA Paribahan and other local couriers.",
-      highlight: false
+      title: "Complete Order Lifecycle Management", 
+      desc: "Fetch orders from WooCommerce, assign team members, track from placement to delivery with automated workflows and status updates.",
+      highlight: false,
+      category: "Order Management"
     },
     { 
       icon: Users, 
-      title: "Team Performance Analytics", 
-      desc: "Track KPIs, conversion rates, and productivity for each team member.",
-      highlight: false
+      title: "Team Management & Performance", 
+      desc: "Assign orders to team members, track individual performance metrics, conversion rates, and productivity with detailed analytics.",
+      highlight: false,
+      category: "Team Management"
+    },
+    { 
+      icon: TrendingUp, 
+      title: "Advanced Reporting & Profit Analysis", 
+      desc: "Generate comprehensive reports on sales, profit/loss, inventory turnover, and business performance with exportable data.",
+      highlight: false,
+      category: "Analytics & Reports"
+    },
+    { 
+      icon: BarChart3, 
+      title: "Smart Inventory & Stock Management", 
+      desc: "Real-time stock tracking, low inventory alerts, automatic reorder suggestions, and inventory optimization recommendations.",
+      highlight: false,
+      category: "Inventory"
+    },
+    { 
+      icon: Truck, 
+      title: "Bulk Delivery Partner Operations", 
+      desc: "Assign multiple orders to delivery partners in bulk, track shipments, and manage courier partnerships with Pathao, RedX, SA Paribahan.",
+      highlight: false,
+      category: "Logistics"
+    },
+    { 
+      icon: FileText, 
+      title: "Customer Order History & CRM", 
+      desc: "Complete customer profiles with order history, purchase patterns, and personalized insights for better customer relationship management.",
+      highlight: false,
+      category: "Customer Management"
+    },
+    { 
+      icon: DollarSign, 
+      title: "Automated Invoicing & Documentation", 
+      desc: "Bulk invoice generation, delivery slip printing, memo creation, and automated documentation for seamless order processing.",
+      highlight: false,
+      category: "Documentation"
     },
     { 
       icon: Shield, 
-      title: "Duplicate Order Detection", 
-      desc: "AI-powered system to identify and prevent fake/duplicate orders.",
-      highlight: false
+      title: "Fraud Detection & Security", 
+      desc: "AI-powered duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
+      highlight: false,
+      category: "Security"
     }
   ];
 
@@ -98,22 +125,20 @@ const OryzaLanding = () => {
     {
       name: "Early User",
       business: "Fashion Store Owner",
-      text: "The AI Business Intelligence feature is incredible. I can just ask which products are losing money and get instant answers with charts.",
+      text: "The AI Business Intelligence feature is incredible. I can just ask which products are performing well and get instant answers with charts. It's so intuitive.",
       metric: "Early Adopter",
       image: "EU"
     },
     {
       name: "Development Partner",
       business: "Electronics Retailer",
-      text: "Finally, a system built specifically for Bangladeshi e-commerce. The WooCommerce integration works perfectly.",
+      text: "Finally, a system built specifically for Bangladeshi e-commerce. The WooCommerce integration works perfectly and the insights help me focus on what matters.",
       metric: "Dev Partner",
       image: "DP"
     }
   ];
 
-  const trustedBrands = [
-    "Dhaka Fashion", "BeautyBD", "TechWorld", "GadgetHub", "StyleZone", "HomeDecor"
-  ];
+
 
   const courierPartners = [
     "Pathao", "RedX", "SA Paribahan", "Sundarban", "Karatoya", "eCourier"
@@ -126,7 +151,7 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
                 <span className="font-bold text-xl text-white">O</span>
               </div>
               <div>
@@ -136,11 +161,11 @@ const OryzaLanding = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#ai-demo" className="text-gray-700 hover:text-blue-600 font-medium">AI Demo</a>
-              <a href="#features" className="text-gray-700 hover:text-blue-600 font-medium">Features</a>
-              <a href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium">Pricing</a>
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
-                Start Free Trial
+              <a href="#ai-demo" className="text-gray-700 hover:text-green-600 font-medium">AI Demo</a>
+              <a href="#features" className="text-gray-700 hover:text-green-600 font-medium">Features</a>
+              {/* <a href="#pricing" className="text-gray-700 hover:text-green-600 font-medium">Pricing</a> */}
+              <button className="px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
+                Contact Us
               </button>
             </div>
 
@@ -156,49 +181,96 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             {/* New Launch Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full mb-6">
               <Zap className="w-4 h-4 mr-2" />
               <span className="text-sm font-medium">🚀 Newly Launched - Built for Modern E-commerce</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Stop Guessing. <br />
-              Start <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Knowing</span> Your Business.
+              Start <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Growing</span> Your Business.
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               The first e-commerce management system with AI Business Intelligence. 
-              Ask questions in natural language and get instant business insights with charts and data tables.
+              Make smarter decisions with real-time insights, optimize your operations, and grow your business with data-driven strategies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl text-lg font-semibold hover:shadow-xl transition-all flex items-center justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button className="group px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-xl transition-all flex items-center justify-center">
                 Try AI Business Intelligence
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all">
+              <button className="flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl text-lg font-semibold hover:border-green-600 hover:text-green-600 transition-all">
                 <PlayCircle className="w-5 h-5 mr-2" />
                 See AI Demo
               </button>
+            </div> */}
+
+            {/* Enhanced Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+              <div className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Bot className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">AI-Powered</div>
+                <div className="text-sm text-gray-600">Smart Analytics & Insights</div>
+                <div className="mt-2 w-full bg-green-100 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full w-full"></div>
+                </div>
+              </div>
+              
+              <div className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Real-time</div>
+                <div className="text-sm text-gray-600">Live Business Monitoring</div>
+                <div className="mt-2 w-full bg-blue-100 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-full"></div>
+                </div>
+              </div>
+              
+              <div className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Complete</div>
+                <div className="text-sm text-gray-600">End-to-End Management</div>
+                <div className="mt-2 w-full bg-purple-100 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-full"></div>
+                </div>
+              </div>
+              
+              <div className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">Free Trial</div>
+                <div className="text-sm text-gray-600">No Setup Required</div>
+                <div className="mt-2 w-full bg-orange-100 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full w-full"></div>
+                </div>
+              </div>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            {/* Key Metrics */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">New</div>
-                <div className="text-sm text-gray-600">Just Launched</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">9+</div>
+                <div className="text-gray-600 font-medium">Core Features</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">AI-First</div>
-                <div className="text-sm text-gray-600">Business Intelligence</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">6+</div>
+                <div className="text-gray-600 font-medium">Courier Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">Local</div>
-                <div className="text-sm text-gray-600">Built for Bangladesh</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">24/7</div>
+                <div className="text-gray-600 font-medium">Real-time Monitoring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600">Free</div>
-                <div className="text-sm text-gray-600">Trial Available</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent mb-2">100%</div>
+                <div className="text-gray-600 font-medium">Bangladesh Built</div>
               </div>
             </div>
           </div>
@@ -206,7 +278,7 @@ const OryzaLanding = () => {
       </section>
 
       {/* Trusted Brands */}
-      <section className="py-8 bg-gray-50 border-t border-b">
+      {/* <section className="py-8 bg-gray-50 border-t border-b">
         <div className="container mx-auto px-6">
           <p className="text-center text-gray-600 mb-4">বিশ্বস্ত ব্র্যান্ডসমূহ</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
@@ -217,29 +289,249 @@ const OryzaLanding = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* AI Demo Section */}
-      <section id="ai-demo" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+
+
+      {/* Problems Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-blue-600">AI Business Intelligence</span> in Action
+              Running an E-commerce Business <span className="text-red-600">Shouldn't Be This Hard</span>
             </h2>
-            <p className="text-xl text-gray-600">Ask natural language questions, get instant visual insights from your real data</p>
+            <p className="text-xl text-gray-600">Common challenges every e-commerce owner faces daily</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {painPoints.map((problem, idx) => (
+              <div key={idx} className="group p-8 bg-white rounded-3xl border-2 border-gray-100 hover:border-red-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-red-100 to-orange-100 rounded-full opacity-20"></div>
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`} style={{backgroundColor: `${problem.color.includes('red') ? 'rgb(254 242 242)' : problem.color.includes('orange') ? 'rgb(255 247 237)' : problem.color.includes('yellow') ? 'rgb(254 249 195)' : problem.color.includes('blue') ? 'rgb(239 246 255)' : problem.color.includes('purple') ? 'rgb(250 245 255)' : 'rgb(240 253 244)'}`}}>
+                  <problem.icon className={`w-8 h-8 ${problem.color}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors duration-300">{problem.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{problem.desc}</p>
+                <div className="mt-4 flex items-center text-red-500 font-semibold text-sm">
+                  <AlertTriangle className="w-4 h-4 mr-1" />
+                  Common Issue
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive Features Overview */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              Complete <span className="text-green-600">E-commerce Management</span> System
+            </h2>
+            <p className="text-xl text-gray-600">Everything you need to run and scale your online business</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Package className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">WooCommerce Integration</h3>
+              <p className="text-xs text-gray-600">Automatic order fetching</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Users className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Team Assignment</h3>
+              <p className="text-xs text-gray-600">Assign orders to members</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <TrendingUp className="w-8 h-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Order Lifecycle</h3>
+              <p className="text-xs text-gray-600">End-to-end tracking</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <BarChart3 className="w-8 h-8 text-red-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Business Reports</h3>
+              <p className="text-xs text-gray-600">Comprehensive analytics</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Bot className="w-8 h-8 text-orange-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">AI Dashboard</h3>
+              <p className="text-xs text-gray-600">Smart analytics</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-cyan-50 to-cyan-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Package className="w-8 h-8 text-cyan-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Stock Management</h3>
+              <p className="text-xs text-gray-600">Inventory tracking</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <DollarSign className="w-8 h-8 text-yellow-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Profit Analysis</h3>
+              <p className="text-xs text-gray-600">Real-time calculations</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Truck className="w-8 h-8 text-indigo-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Bulk Delivery</h3>
+              <p className="text-xs text-gray-600">Multiple courier assign</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-pink-50 to-pink-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Users className="w-8 h-8 text-pink-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Customer History</h3>
+              <p className="text-xs text-gray-600">Complete order records</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <Truck className="w-8 h-8 text-teal-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Courier Integration</h3>
+              <p className="text-xs text-gray-600">Direct sending</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-gray-50 to-gray-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <FileText className="w-8 h-8 text-gray-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Bulk Invoice</h3>
+              <p className="text-xs text-gray-600">Mass generation</p>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-emerald-50 to-emerald-100 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <FileText className="w-8 h-8 text-emerald-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-bold text-gray-900 text-sm mb-1">Print & Memo</h3>
+              <p className="text-xs text-gray-600">Delivery slips & memos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              <span className="text-green-600">Smart Features</span> for Modern Business Owners
+            </h2>
+            <p className="text-xl text-gray-600">Built with advanced technology to help you make better business decisions</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {features.map((feature, idx) => (
+              <div key={idx} className={`group p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+                feature.highlight ? 'ring-2 ring-green-500 relative bg-gradient-to-br from-green-50 to-blue-50' : ''
+              }`}>
+                {feature.highlight && (
+                  <div className="absolute -top-3 left-6 px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg">
+                    🤖 AI POWERED
+                  </div>
+                )}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 ${
+                    feature.highlight 
+                      ? 'bg-gradient-to-r from-green-500 to-blue-500' 
+                      : 'bg-gradient-to-r from-gray-100 to-gray-200 group-hover:from-green-500 group-hover:to-blue-500'
+                  }`}>
+                    <feature.icon className={`w-7 h-7 transition-colors duration-300 ${
+                      feature.highlight 
+                        ? 'text-white' 
+                        : 'text-gray-600 group-hover:text-white'
+                    }`} />
+                  </div>
+                  <div className="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                    {feature.category}
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Integration Partners */}
+          <div className="mt-20 text-center">
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center justify-center">
+                <Truck className="w-6 h-6 mr-3 text-green-600" />
+                সকল জনপ্রিয় কুরিয়ার সার্ভিসের সাথে Integration
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {courierPartners.map((courier, idx) => (
+                  <div key={idx} className="group bg-gradient-to-r from-green-50 to-blue-50 hover:from-green-100 hover:to-blue-100 p-4 rounded-xl border-2 border-transparent hover:border-green-300 transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-2 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <Truck className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-semibold text-gray-700 text-sm">{courier}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-600 mt-6 text-sm">আরও courier partners যোগ হচ্ছে শীঘ্রই...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Early Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              Early <span className="text-green-600">Feedback</span>
+            </h2>
+            <p className="text-xl text-gray-600">What our early users and development partners are saying</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, idx) => (
+              <div key={idx} className="group bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-green-100 to-blue-100 rounded-full opacity-30"></div>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {testimonial.image}
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
+                    <div className="text-gray-600">{testimonial.business}</div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-green-100 to-blue-100 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                  <Quote className="w-6 h-6 text-green-600" />
+                </div>
+                <p className="text-gray-700 mb-6 italic leading-relaxed text-lg">"{testimonial.text}"</p>
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-bold shadow-lg">
+                  ⭐ {testimonial.metric}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Demo Section */}
+      <section id="ai-demo" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              <span className="text-green-600">AI Business Intelligence</span> in Action
+            </h2>
+            <p className="text-xl text-gray-600">Ask natural language questions and get instant visual insights from your real business data</p>
           </div>
 
           <div className="max-w-6xl mx-auto">
             {/* AI Interface Demo */}
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden mb-8">
               {/* AI Chat Interface Header */}
-              <div className="bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-4 flex items-center">
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 px-6 py-4 flex items-center">
                 <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-                  <span className="text-white font-bold">✨</span>
+                  <span className="text-white font-bold">💰</span>
                 </div>
                 <div className="text-white">
                   <div className="font-semibold">AI Business Intelligence</div>
-                  <div className="text-sm opacity-90">Natural language analytics • Real-time insights • Powered by AI</div>
+                  <div className="text-sm opacity-90">Natural language analytics • Real-time insights • AI-powered analytics</div>
                 </div>
                 <div className="ml-auto flex space-x-1">
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -251,15 +543,15 @@ const OryzaLanding = () => {
               {/* User Input */}
               <div className="p-6 border-b bg-gray-50">
                 <div className="bg-white p-4 rounded-xl shadow-sm border">
-                  <p className="text-gray-700 font-medium">show me yesterday's product sold</p>
+                  <p className="text-gray-700 font-medium">show me yesterday's top selling products</p>
                   <div className="flex justify-between items-center mt-3 text-sm text-gray-500">
                     <span>Press Enter to analyze • Shift+Enter for new line</span>
                     <div className="flex space-x-2">
-                      <button className="px-3 py-1 bg-orange-100 text-orange-700 rounded-md text-xs font-medium">
+                      <button className="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-medium">
                         ⚡ Quick Insights
                       </button>
-                      <button className="px-3 py-1 bg-purple-600 text-white rounded-md text-xs font-medium">
-                        ✨ Go
+                      <button className="px-3 py-1 bg-green-600 text-white rounded-md text-xs font-medium">
+                        ✨ Analyze
                       </button>
                     </div>
                   </div>
@@ -270,24 +562,24 @@ const OryzaLanding = () => {
               <div className="p-6">
                 {/* Chart Title */}
                 <div className="flex items-center mb-6">
-                  <BarChart3 className="w-5 h-5 text-blue-600 mr-2" />
-                  <h3 className="text-xl font-bold text-gray-900">Total Quantity Sold per Product Yesterday</h3>
-                  <div className="ml-auto text-sm text-gray-500">Chart Type: BarChart | Data Points: 16</div>
+                  <BarChart3 className="w-5 h-5 text-green-600 mr-2" />
+                  <h3 className="text-xl font-bold text-gray-900">Top Selling Products Yesterday</h3>
+                  <div className="ml-auto text-sm text-gray-500">Chart Type: BarChart | Sales Performance</div>
                 </div>
 
                 {/* Actual Chart Visualization */}
-                <div className="bg-purple-50 rounded-xl p-8 mb-6">
+                <div className="bg-blue-50 rounded-xl p-8 mb-6">
                   <div className="grid grid-cols-10 gap-2 items-end h-48">
-                    <div className="bg-purple-600 rounded-t" style={{height: '85%'}}></div>
-                    <div className="bg-purple-500 rounded-t" style={{height: '65%'}}></div>
-                    <div className="bg-purple-500 rounded-t" style={{height: '62%'}}></div>
-                    <div className="bg-purple-500 rounded-t" style={{height: '58%'}}></div>
-                    <div className="bg-purple-500 rounded-t" style={{height: '55%'}}></div>
-                    <div className="bg-purple-400 rounded-t" style={{height: '52%'}}></div>
-                    <div className="bg-purple-400 rounded-t" style={{height: '35%'}}></div>
-                    <div className="bg-purple-400 rounded-t" style={{height: '32%'}}></div>
-                    <div className="bg-purple-400 rounded-t" style={{height: '30%'}}></div>
-                    <div className="bg-purple-300 rounded-t" style={{height: '25%'}}></div>
+                    <div className="bg-blue-600 rounded-t" style={{height: '85%'}}></div>
+                    <div className="bg-blue-500 rounded-t" style={{height: '75%'}}></div>
+                    <div className="bg-blue-500 rounded-t" style={{height: '68%'}}></div>
+                    <div className="bg-green-500 rounded-t" style={{height: '62%'}}></div>
+                    <div className="bg-green-500 rounded-t" style={{height: '58%'}}></div>
+                    <div className="bg-green-400 rounded-t" style={{height: '52%'}}></div>
+                    <div className="bg-green-400 rounded-t" style={{height: '45%'}}></div>
+                    <div className="bg-green-400 rounded-t" style={{height: '38%'}}></div>
+                    <div className="bg-gray-400 rounded-t" style={{height: '25%'}}></div>
+                    <div className="bg-gray-300 rounded-t" style={{height: '15%'}}></div>
                   </div>
                   <div className="grid grid-cols-10 gap-2 mt-4 text-xs text-gray-600 text-center">
                     <div>Hair Oil</div>
@@ -305,12 +597,12 @@ const OryzaLanding = () => {
 
                 {/* Data Table */}
                 <div className="bg-white border rounded-xl overflow-hidden">
-                  <div className="bg-purple-600 px-6 py-3 flex items-center justify-between">
+                  <div className="bg-blue-600 px-6 py-3 flex items-center justify-between">
                     <div className="flex items-center text-white">
                       <FileText className="w-4 h-4 mr-2" />
                       <span className="font-semibold">Results Table</span>
                     </div>
-                    <button className="px-3 py-1 bg-white text-purple-600 rounded-md text-sm font-medium">
+                    <button className="px-3 py-1 bg-white text-blue-600 rounded-md text-sm font-medium">
                       📊 Export CSV
                     </button>
                   </div>
@@ -334,20 +626,20 @@ const OryzaLanding = () => {
                         </thead>
                         <tbody className="text-sm">
                           <tr className="border-b hover:bg-gray-50">
-                            <td className="py-3 px-4">Hair Oil Half Course</td>
-                            <td className="py-3 px-4 text-right font-semibold">410</td>
+                            <td className="py-3 px-4 text-gray-900">Hair Oil Half Course</td>
+                            <td className="py-3 px-4 text-right font-semibold text-gray-900">410</td>
                           </tr>
                           <tr className="border-b hover:bg-gray-50">
-                            <td className="py-3 px-4">ONIMIX Shampoo Half Course</td>
-                            <td className="py-3 px-4 text-right font-semibold">274</td>
+                            <td className="py-3 px-4 text-gray-900">ONIMIX Shampoo Half Course</td>
+                            <td className="py-3 px-4 text-right font-semibold text-gray-900">274</td>
                           </tr>
                           <tr className="border-b hover:bg-gray-50">
-                            <td className="py-3 px-4">Coupon Gift</td>
-                            <td className="py-3 px-4 text-right font-semibold">249</td>
+                            <td className="py-3 px-4 text-gray-900">Coupon Gift</td>
+                            <td className="py-3 px-4 text-right font-semibold text-gray-900">249</td>
                           </tr>
                           <tr className="border-b hover:bg-gray-50">
-                            <td className="py-3 px-4">Scalp Massager</td>
-                            <td className="py-3 px-4 text-right font-semibold">238</td>
+                            <td className="py-3 px-4 text-gray-900">Scalp Massager</td>
+                            <td className="py-3 px-4 text-right font-semibold text-gray-900">238</td>
                           </tr>
                           <tr className="hover:bg-gray-50">
                             <td className="py-3 px-4 text-gray-500">Showing 1 to 10 of 16 results</td>
@@ -368,13 +660,13 @@ const OryzaLanding = () => {
                 <h3 className="font-bold text-gray-900 mb-2">Natural Language Queries</h3>
                 <p className="text-gray-600 text-sm">Ask questions just like you would ask a human analyst</p>
               </div>
-              <div className="bg-purple-50 p-6 rounded-xl text-center">
-                <PieChart className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+              <div className="bg-green-50 p-6 rounded-xl text-center">
+                <PieChart className="w-8 h-8 text-green-600 mx-auto mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">Instant Visualizations</h3>
                 <p className="text-gray-600 text-sm">Get beautiful charts and graphs generated automatically</p>
               </div>
-              <div className="bg-green-50 p-6 rounded-xl text-center">
-                <Database className="w-8 h-8 text-green-600 mx-auto mb-3" />
+              <div className="bg-blue-50 p-6 rounded-xl text-center">
+                <Database className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">Exportable Data Tables</h3>
                 <p className="text-gray-600 text-sm">Download your results as CSV for further analysis</p>
               </div>
@@ -383,115 +675,15 @@ const OryzaLanding = () => {
         </div>
       </section>
 
-      {/* Problems Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Running an E-commerce Business <span className="text-red-600">Shouldn't Be This Hard</span>
-            </h2>
-            <p className="text-xl text-gray-600">Common challenges every e-commerce owner faces daily</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {painPoints.map((problem, idx) => (
-              <div key={idx} className="p-6 bg-gray-50 rounded-2xl border hover:shadow-lg transition-all">
-                <div className={`w-12 h-12 ${problem.color} bg-opacity-20 rounded-xl flex items-center justify-center mb-4`}>
-                  <problem.icon className={`w-6 h-6 ${problem.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{problem.title}</h3>
-                <p className="text-gray-600">{problem.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-blue-600">Smart Features</span> for Smart Business Owners
-            </h2>
-            <p className="text-xl text-gray-600">Built with modern technology for the new generation of entrepreneurs</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {features.map((feature, idx) => (
-              <div key={idx} className={`p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all ${
-                feature.highlight ? 'ring-2 ring-blue-500 relative' : ''
-              }`}>
-                {feature.highlight && (
-                  <div className="absolute -top-3 left-6 px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full">
-                    AI POWERED
-                  </div>
-                )}
-                <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Integration Partners */}
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">সকল জনপ্রিয় কুরিয়ার সার্ভিসের সাথে Integration</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {courierPartners.map((courier, idx) => (
-                <div key={idx} className="px-4 py-2 bg-white rounded-lg border shadow-sm">
-                  <span className="font-semibold text-gray-700">{courier}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Early Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Early <span className="text-green-600">Feedback</span>
-            </h2>
-            <p className="text-xl text-gray-600">What our early users and development partners are saying</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-3xl">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.image}
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">{testimonial.name}</div>
-                    <div className="text-gray-600">{testimonial.business}</div>
-                  </div>
-                </div>
-                <Quote className="w-6 h-6 text-blue-600 mb-3" />
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                  {testimonial.metric}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Experience AI-Powered Analytics?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join our early adopters and be among the first to revolutionize your e-commerce business with AI.
+              Join our early adopters and be among the first to revolutionize your e-commerce business with AI-powered insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -514,7 +706,7 @@ const OryzaLanding = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span>Early Adopter Pricing</span>
+                <span>AI-Powered Analytics</span>
               </div>
             </div>
           </div>
@@ -526,7 +718,7 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
                 <span className="font-bold text-xl">O</span>
               </div>
               <div>
