@@ -146,6 +146,15 @@ const OryzaLanding = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Floating WhatsApp CTA */}
+      <a
+        href="https://wa.me/+8801700000000"
+        target="_blank"
+        rel="noopener"
+        className="fixed bottom-6 right-6 z-50 btn btn-primary shadow-2xl"
+      >
+        Chat on WhatsApp
+      </a>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-white/90 backdrop-blur-md'}`}>
         <div className="container mx-auto px-6 py-4">
@@ -164,12 +173,11 @@ const OryzaLanding = () => {
               <a href="#ai-demo" className="text-gray-700 hover:text-green-600 font-medium">AI Demo</a>
               <a href="#features" className="text-gray-700 hover:text-green-600 font-medium">Features</a>
               {/* <a href="#pricing" className="text-gray-700 hover:text-green-600 font-medium">Pricing</a> */}
-              <button className="px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all">
-                Contact Us
-              </button>
+              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-primary">
+                WhatsApp Us
+              </a>
             </div>
-
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-lg hover:bg-gray-100">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -194,18 +202,13 @@ const OryzaLanding = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               The first e-commerce management system with AI Business Intelligence. 
               Make smarter decisions with real-time insights, optimize your operations, and grow your business with data-driven strategies.
+              {/* Built for Bangladeshi e-commerce. AI Business Intelligence, WooCommerce sync, courier integrations (Pathao, RedX, SA Paribahan) and profit analytics — all in one place. */}
             </p>
 
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="group px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl text-lg font-semibold hover:shadow-xl transition-all flex items-center justify-center">
-                Try AI Business Intelligence
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl text-lg font-semibold hover:border-green-600 hover:text-green-600 transition-all">
-                <PlayCircle className="w-5 h-5 mr-2" />
-                See AI Demo
-              </button>
-            </div> */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a href="#ai-demo" className="btn btn-primary btn-lg">Try AI Business Intelligence</a>
+              <a href="#features" className="btn btn-outline btn-lg">See Features</a>
+            </div>
 
             {/* Enhanced Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
@@ -547,12 +550,8 @@ const OryzaLanding = () => {
                   <div className="flex justify-between items-center mt-3 text-sm text-gray-500">
                     <span>Press Enter to analyze • Shift+Enter for new line</span>
                     <div className="flex space-x-2">
-                      <button className="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-medium">
-                        ⚡ Quick Insights
-                      </button>
-                      <button className="px-3 py-1 bg-green-600 text-white rounded-md text-xs font-medium">
-                        ✨ Analyze
-                      </button>
+                      <button className="btn btn-outline btn-sm">⚡ Quick Insights</button>
+                      <button className="btn btn-primary btn-sm">✨ Analyze</button>
                     </div>
                   </div>
                 </div>
@@ -602,9 +601,7 @@ const OryzaLanding = () => {
                       <FileText className="w-4 h-4 mr-2" />
                       <span className="font-semibold">Results Table</span>
                     </div>
-                    <button className="px-3 py-1 bg-white text-blue-600 rounded-md text-sm font-medium">
-                      📊 Export CSV
-                    </button>
+                    <button className="btn btn-white btn-sm">📊 Export CSV</button>
                   </div>
                   <div className="p-6">
                     <div className="grid grid-cols-2 gap-4 mb-4">
@@ -687,12 +684,8 @@ const OryzaLanding = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-xl text-lg font-bold hover:bg-gray-100 transition-all">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-xl text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all">
-                Schedule a Demo
-              </button>
+              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-white btn-lg font-bold">Start Free Trial</a>
+              <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a>
             </div>
 
             <div className="flex justify-center items-center space-x-6 text-blue-100">
