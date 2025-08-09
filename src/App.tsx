@@ -301,7 +301,7 @@ const OryzaLanding = () => {
                 <span className="font-bold text-xl text-white">O</span>
               </div> */}
               <div>
-                <span className="text-2xl font-bold text-gray-100 font-display tracking-tight">Oryza</span>
+                <span className="text-2xl font-bold text-gray-100 font-display tracking-tight">ORYZA</span>
                 <div className="text-xs text-gray-400 -mt-1">by Pyzasoft</div>
               </div>
             </div>
@@ -353,7 +353,8 @@ const OryzaLanding = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="#ai-demo" className="btn btn-primary btn-lg">AI Business Intelligence</a>
-              <a href="#features" className="btn btn-outline btn-lg">See Features</a>
+              {/* <a href="#features" className="btn btn-outline btn-lg">See Features</a> */}
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-outline backdrop-blur-xl btn-lg font-bold">Schedule a Demo</a>
             </div>
 
             {/* Enhanced Stats Grid */}
@@ -395,8 +396,8 @@ const OryzaLanding = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">Free Trial</div>
-                <div className="text-sm text-gray-300">No Setup Required</div>
+                <div className="text-2xl font-bold text-white mb-1">Fast Setup</div>
+                <div className="text-sm text-gray-300">Easy to start </div>
                 <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full w-full"></div>
                 </div>
@@ -871,8 +872,8 @@ const OryzaLanding = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Start Free Trial</a>
-              <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a>
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Schedule a Demo</a>
+              {/* <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a> */}
             </div>
 
             <div className="flex justify-center items-center space-x-6 text-blue-100">
@@ -902,7 +903,7 @@ const OryzaLanding = () => {
                 <span className="font-bold text-xl">O</span>
               </div> */}
               <div>
-                <span className="text-2xl font-bold">Oryza</span>
+                <span className="text-2xl font-bold">ORYZA</span>
                 <div className="text-sm text-gray-400">by Pyzasoft • Newly Launched</div>
               </div>
             </div>
@@ -925,7 +926,7 @@ const OryzaLanding = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            © 2025 Oryza by Pyzasoft. All rights reserved.{/*  Newly Launched • Made in Bangladesh */}
+            © 2025 Pyzasoft. All rights reserved.{/*  Newly Launched • Made in Bangladesh */}
           </div>
         </div>
       </footer>
