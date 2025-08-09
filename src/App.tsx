@@ -141,7 +141,7 @@ const OryzaLanding = () => {
 
 
   const courierPartners = [
-    "Pathao", "RedX", "SA Paribahan", "Sundarban", "Karatoya", "eCourier"
+    "Pathao", "RedX", "Steadfast"
   ];
 
   return (
@@ -160,9 +160,9 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
                 <span className="font-bold text-xl text-white">O</span>
-              </div>
+              </div> */}
               <div>
                 <span className="text-2xl font-bold text-gray-100">Oryza</span>
                 <div className="text-xs text-gray-400 -mt-1">by Pyzasoft</div>
@@ -170,10 +170,10 @@ const OryzaLanding = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#ai-demo" className="text-gray-300 hover:text-green-400 font-medium">AI Demo</a>
+              {/* <a href="#ai-demo" className="text-gray-300 hover:text-green-400 font-medium">AI Demo</a> */}
               <a href="#features" className="text-gray-300 hover:text-green-400 font-medium">Features</a>
               {/* <a href="#pricing" className="text-gray-300 hover:text-green-400 font-medium">Pricing</a> */}
-              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-whatsapp">
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp">
                 WhatsApp Us
               </a>
             </div>
@@ -206,7 +206,7 @@ const OryzaLanding = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="#ai-demo" className="btn btn-primary btn-lg">Try AI Business Intelligence</a>
+              <a href="#ai-demo" className="btn btn-primary btn-lg">AI Business Intelligence</a>
               <a href="#features" className="btn btn-outline btn-lg">See Features</a>
             </div>
 
@@ -258,7 +258,7 @@ const OryzaLanding = () => {
             </div>
 
             {/* Key Metrics */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
                 <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">9+</div>
                 <div className="text-gray-400 font-medium">Core Features</div>
@@ -275,7 +275,7 @@ const OryzaLanding = () => {
                 <div className="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent mb-2">100%</div>
                 <div className="text-gray-400 font-medium">Bangladesh Built</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -329,6 +329,7 @@ const OryzaLanding = () => {
       <section className="py-20 bg-gray-950">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
+            <span className="text-3xl md:text-3xl font-bold text-white mb-4">The Solution to Your Problems?</span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Complete <span className="text-green-600">E-commerce Management</span> System
             </h2>
@@ -426,11 +427,11 @@ const OryzaLanding = () => {
               <div key={idx} className={`group p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                 feature.highlight ? 'ring-2 ring-green-500 relative bg-gradient-to-br from-green-950/40 to-blue-900/20' : 'bg-gray-900 border border-gray-800'
               }`}>
-                {feature.highlight && (
+                {/* {feature.highlight && (
                   <div className="absolute -top-3 left-6 px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg">
                     🤖 AI POWERED
                   </div>
-                )}
+                )} */}
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 ${
                     feature.highlight 
@@ -458,9 +459,9 @@ const OryzaLanding = () => {
                 <Truck className="w-6 h-6 mr-3 text-green-600" />
                 সকল জনপ্রিয় কুরিয়ার সার্ভিসের সাথে Integration
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="flex flex-row justify-center w-full gap-4">
                 {courierPartners.map((courier, idx) => (
-                  <div key={idx} className="group bg-gradient-to-r from-green-950/30 to-blue-900/20 hover:from-green-900/40 hover:to-blue-900/40 p-4 rounded-xl border border-transparent hover:border-green-700/40 transition-all duration-300 transform hover:-translate-y-1">
+                  <div key={idx} className="group bg-gradient-to-r from-green-950/30 to-blue-900/20 hover:from-green-900/40 hover:to-blue-900/40 p-4 rounded-xl border border-transparent hover:border-green-700/40 transition-all duration-300 transform hover:-translate-y-1 w-full">
                     <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-2 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
                       <Truck className="w-4 h-4 text-white" />
                     </div>
@@ -515,7 +516,7 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              <span className="text-green-600">AI Business Intelligence</span> in Action
+              <span className="text-green-600">AI Business Intelligence</span> {/* in Action */}
             </h2>
             <p className="text-xl text-gray-300">Ask natural language questions and get instant visual insights from your real business data</p>
           </div>
@@ -577,15 +578,15 @@ const OryzaLanding = () => {
                     <div className="bg-gray-300 rounded-t" style={{height: '15%'}}></div>
                   </div>
                   <div className="grid grid-cols-10 gap-2 mt-4 text-xs text-gray-300 text-center">
-                    <div>Hair Oil</div>
-                    <div>ONIMIX</div>
-                    <div>Half Course</div>
-                    <div>Scalp</div>
-                    <div>Hairpack</div>
-                    <div>Comb</div>
-                    <div>ONIMIX Gift</div>
-                    <div>Mehedi</div>
-                    <div>Hair Trial</div>
+                    <div>Product A</div>
+                    <div>Product B</div>
+                    <div>Product C</div>
+                    <div>Product D</div>
+                    <div>Product E</div>
+                    <div>Product F</div>
+                    <div>Product G</div>
+                    <div>Product H</div>
+                    <div>Product I</div>
                     <div>More...</div>
                   </div>
                 </div>
@@ -619,19 +620,19 @@ const OryzaLanding = () => {
                         </thead>
                         <tbody className="text-sm">
                           <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Hair Oil Half Course</td>
+                            <td className="py-3 px-4 text-gray-100">Product A</td>
                             <td className="py-3 px-4 text-right font-semibold text-gray-100">410</td>
                           </tr>
                           <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">ONIMIX Shampoo Half Course</td>
+                            <td className="py-3 px-4 text-gray-100">Product B</td>
                             <td className="py-3 px-4 text-right font-semibold text-gray-100">274</td>
                           </tr>
                           <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Coupon Gift</td>
+                            <td className="py-3 px-4 text-gray-100">Product C</td>
                             <td className="py-3 px-4 text-right font-semibold text-gray-100">249</td>
                           </tr>
                           <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Scalp Massager</td>
+                            <td className="py-3 px-4 text-gray-100">Product D</td>
                             <td className="py-3 px-4 text-right font-semibold text-gray-100">238</td>
                           </tr>
                           <tr>
@@ -680,7 +681,7 @@ const OryzaLanding = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="https://wa.me/+8801700000000" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Start Free Trial</a>
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Start Free Trial</a>
               <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a>
             </div>
 
@@ -707,9 +708,9 @@ const OryzaLanding = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center">
                 <span className="font-bold text-xl">O</span>
-              </div>
+              </div> */}
               <div>
                 <span className="text-2xl font-bold">Oryza</span>
                 <div className="text-sm text-gray-400">by Pyzasoft • Newly Launched</div>
@@ -722,7 +723,7 @@ const OryzaLanding = () => {
                   <path d="M22.675 0h-21.35C.595 0 0 .595 0 1.326v21.348C0 23.405.595 24 1.326 24h11.495v-9.294H9.691V11.09h3.13V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.312h3.59l-.467 3.616h-3.123V24h6.127C23.405 24 24 23.405 24 22.674V1.326C24 .595 23.405 0 22.675 0z"/>
                 </svg>
               </a>
-              <a href="https://wa.me/+8801700000000" className="p-3 bg-gray-900 rounded-full hover:bg-[#25D366] transition-colors border border-gray-800" aria-label="WhatsApp">
+              <a href="https://wa.me/+8801795665287" className="p-3 bg-gray-900 rounded-full hover:bg-[#25D366] transition-colors border border-gray-800" aria-label="WhatsApp">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20.52 3.48A11.94 11.94 0 0012 .04C5.37.04.02 5.39.02 12.03c0 2.12.56 4.19 1.63 6.01L.05 24l6.12-1.6a12.02 12.02 0 005.83 1.51h.01c6.63 0 12-5.36 12-11.97a11.93 11.93 0 00-3.49-8.46zM12 21.5h-.01a9.46 9.46 0 01-4.82-1.32l-.35-.2-3.63.95.97-3.54-.22-.36a9.45 9.45 0 01-1.46-5.04c0-5.22 4.26-9.48 9.5-9.48a9.45 9.45 0 016.72 2.78 9.42 9.42 0 012.79 6.7c0 5.22-4.26 9.48-9.5 9.48zm5.48-7.17c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.94 1.16-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.49.71.3 1.26.48 1.7.62.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42z"/>
                 </svg>
@@ -734,7 +735,7 @@ const OryzaLanding = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            © 2025 Oryza by Pyzasoft. All rights reserved. Newly Launched • Made in Bangladesh
+            © 2025 Oryza by Pyzasoft. All rights reserved.{/*  Newly Launched • Made in Bangladesh */}
           </div>
         </div>
       </footer>
