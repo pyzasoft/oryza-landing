@@ -252,7 +252,7 @@ const OryzaLanding = () => {
     {
       icon: Shield,
       title: "Fraud Detection & Security",
-      desc: "AI-powered duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
+      desc: "Duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
       highlight: false,
       category: "Security"
     }
@@ -277,9 +277,9 @@ const OryzaLanding = () => {
 
 
 
-  const courierPartners = [
+  /* const courierPartners = [
     "Pathao", "RedX", "Steadfast"
-  ];
+  ]; */
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 overflow-hidden">
@@ -322,14 +322,13 @@ const OryzaLanding = () => {
       </nav>
 
             {/* Hero Section */}
-      <section className="relative pt-28 pb-28 overflow-hidden isolate min-h-[100svh] md:min-h-[100vh]">
+      <section className="relative pt-28 pb-28 overflow-hidden isolate min-h-[100svh] md:min-h-[100vh] flex items-center justify-center">
         {/* Hyperspeed Background */}
         <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
           {/* <div className="w-full h-full"> */}
             <Hyperspeed effectOptions={hyperspeedOptions} />
           {/* </div> */}
         </div>
-
         <div className="relative container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             {/* New Launch Badge */}
@@ -339,8 +338,11 @@ const OryzaLanding = () => {
             </div> */}
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight font-display">
-              Stop Guessing. <br />
-              Start <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Growing</span> Your Business.
+              <span className="text-shimmer">Stop Guessing.</span> <br />
+              Start <span className="relative bg-gradient-to-r from-green-500 via-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                Growing
+                <span className="absolute inset-0 blur-xl opacity-30 bg-gradient-to-r from-green-500 via-emerald-400 to-blue-500 -z-10"></span>
+              </span> Your Business.
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -356,46 +358,46 @@ const OryzaLanding = () => {
 
             {/* Enhanced Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
+              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Bot className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">AI-Powered</div>
                 <div className="text-sm text-gray-300">Smart Analytics & Insights</div>
-                <div className="mt-2 w-full bg-green-900/40 rounded-full h-2">
+                <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full w-full"></div>
                 </div>
               </div>
 
-              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
+              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Real-time</div>
                 <div className="text-sm text-gray-300">Live Business Monitoring</div>
-                <div className="mt-2 w-full bg-blue-900/40 rounded-full h-2">
+                <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-full"></div>
                 </div>
               </div>
 
-              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
+              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Complete</div>
                 <div className="text-sm text-gray-300">End-to-End Management</div>
-                <div className="mt-2 w-full bg-teal-900/40 rounded-full h-2">
+                <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full w-full"></div>
                 </div>
               </div>
 
-              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
+              <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Free Trial</div>
                 <div className="text-sm text-gray-300">No Setup Required</div>
-                <div className="mt-2 w-full bg-orange-900/40 rounded-full h-2">
+                <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full w-full"></div>
                 </div>
               </div>
@@ -481,10 +483,10 @@ const OryzaLanding = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">{problem.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{problem.desc}</p>
-                <div className="mt-4 flex items-center text-red-500 font-semibold text-sm">
+                {/* <div className="mt-4 flex items-center text-red-500 font-semibold text-sm">
                   <AlertTriangle className="w-4 h-4 mr-1" />
                   Common Issue
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -627,7 +629,7 @@ const OryzaLanding = () => {
           </div>
 
           {/* Integration Partners */}
-          <div className="mt-20 text-center">
+          {/* <div className="mt-20 text-center">
             <div className="bg-gray-900/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-800">
               <h3 className="text-2xl font-bold text-white mb-8 flex items-center justify-center">
                 <Truck className="w-6 h-6 mr-3 text-green-600" />
@@ -645,7 +647,7 @@ const OryzaLanding = () => {
               </div>
               <p className="text-gray-400 mt-6 text-sm">আরও courier partners যোগ হচ্ছে শীঘ্রই...</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
