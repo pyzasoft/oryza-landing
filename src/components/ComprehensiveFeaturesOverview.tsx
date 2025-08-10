@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export default function ComprehensiveFeaturesOverview() {
     return (
-        <section className="relative overflow-hidden py-20">
+        <section className="relative overflow-hidden pb-20">
             {/* Subtle section highlight */}
            {/*  <div className="pointer-events-none absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
@@ -11,9 +11,10 @@ export default function ComprehensiveFeaturesOverview() {
             </div> */}
             <div className="relative container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <span className="text-3xl md:text-3xl font-bold text-white mb-4">The Solution to Your Problems?</span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Complete <span className="text-green-600">E-commerce Management</span> System
+                    {/* <span className="text-3xl md:text-3xl font-bold text-white mb-4">The Solution to Your Problems?</span> */}
+                    <span className="text-5xl md:text-7xl font-display tracking-tight font-bold text-white mb-4">ORYZA</span>
+                    <h2 className="text-3xl font-bold text-white mb-4">
+                        Our Complete <span className="text-green-600">E-commerce Management</span> System
                     </h2>
                     <p className="text-xl text-gray-300">Everything you need to run and scale your online business</p>
                 </div>

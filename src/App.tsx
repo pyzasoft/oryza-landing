@@ -1,13 +1,19 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'motion/react';
 import {
-  Package, Users, TrendingUp, BarChart3, Truck, FileText,
-  Shield, Zap, CheckCircle, Mail,
-  AlertTriangle, Clock, DollarSign, Quote, Bot,
-  PieChart, Search, Database
+  Users, TrendingUp,
+  Zap, CheckCircle, Mail,
+  Bot,
+  Phone
 } from 'lucide-react';
 import Hyperspeed from './blocks/Backgrounds/Hyperspeed/Hyperspeed';
+// import ComprehensiveFeaturesOverview from './components/ComprehensiveFeaturesOverview';
+import ProblemsSection from './components/ProblemsSection';
+// import TheSolutionSection from './components/TheSolutionSection';
 import ComprehensiveFeaturesOverview from './components/ComprehensiveFeaturesOverview';
+import AiPreviewSection from './components/AiPreviewSection';
+import ReviewsSection from './components/ReviewsSection';
+import FullFeatures from './components/FullFeatures';
 
 const OryzaLanding = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -154,137 +160,24 @@ const OryzaLanding = () => {
       pixelRatioCap: 2,
     };
   }, [viewport]);
-
-  const painPoints = [
-    {
-      icon: DollarSign,
-      title: "Profit-Loss Confusion",
-      desc: "You're selling products but can't tell which ones are actually profitable.",
-      color: "text-red-500"
-    },
-    {
-      icon: BarChart3,
-      title: "Data Scattered Everywhere",
-      desc: "Order data in one place, inventory in another, payments somewhere else.",
-      color: "text-orange-500"
-    },
-    {
-      icon: Clock,
-      title: "Manual Reporting Takes Hours",
-      desc: "Spending entire days creating reports instead of growing your business.",
-      color: "text-yellow-500"
-    },
-    {
-      icon: AlertTriangle,
-      title: "No Business Intelligence",
-      desc: "Making decisions based on gut feeling instead of real data insights.",
-      color: "text-blue-500"
-    },
-    {
-      icon: Package,
-      title: "Inventory Blindness",
-      desc: "Don't know what's selling fast, what's stuck, or when to reorder.",
-      color: "text-purple-500"
-    },
-    {
-      icon: Users,
-      title: "Team Performance Mystery",
-      desc: "Can't track who's performing well and who needs support.",
-      color: "text-green-500"
-    }
-  ];
-
-  const features = [
-    {
-      icon: Bot,
-      title: "AI Business Intelligence",
-      desc: "Ask questions in natural language and get instant charts, insights, and analytics about your business performance, sales trends, and profitability.",
-      highlight: true,
-      category: "AI & Analytics"
-    },
-    {
-      icon: Package,
-      title: "Complete Order Lifecycle Management",
-      desc: "Fetch orders from WooCommerce, assign team members, track from placement to delivery with automated workflows and status updates.",
-      highlight: false,
-      category: "Order Management"
-    },
-    {
-      icon: Users,
-      title: "Team Management & Performance",
-      desc: "Assign orders to team members, track individual performance metrics, conversion rates, and productivity with detailed analytics.",
-      highlight: false,
-      category: "Team Management"
-    },
-    {
-      icon: TrendingUp,
-      title: "Advanced Reporting & Profit Analysis",
-      desc: "Generate comprehensive reports on sales, profit/loss, inventory turnover, and business performance with exportable data.",
-      highlight: false,
-      category: "Analytics & Reports"
-    },
-    {
-      icon: BarChart3,
-      title: "Smart Inventory & Stock Management",
-      desc: "Real-time stock tracking, low inventory alerts, automatic reorder suggestions, and inventory optimization recommendations.",
-      highlight: false,
-      category: "Inventory"
-    },
-    {
-      icon: Truck,
-      title: "Bulk Delivery Partner Operations",
-      desc: "Assign multiple orders to delivery partners in bulk, track shipments, and manage courier partnerships with Pathao, RedX, SA Paribahan.",
-      highlight: false,
-      category: "Logistics"
-    },
-    {
-      icon: FileText,
-      title: "Customer Order History & CRM",
-      desc: "Complete customer profiles with order history, purchase patterns, and personalized insights for better customer relationship management.",
-      highlight: false,
-      category: "Customer Management"
-    },
-    {
-      icon: DollarSign,
-      title: "Automated Invoicing & Documentation",
-      desc: "Bulk invoice generation, delivery slip printing, memo creation, and automated documentation for seamless order processing.",
-      highlight: false,
-      category: "Documentation"
-    },
-    {
-      icon: Shield,
-      title: "Fraud Detection & Security",
-      desc: "Duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
-      highlight: false,
-      category: "Security"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Early User",
-      business: "Fashion Store Owner",
-      text: "The AI Business Intelligence feature is incredible. I can just ask which products are performing well and get instant answers with charts. It's so intuitive.",
-      metric: "Early Adopter",
-      image: "EU"
-    },
-    {
-      name: "Development Partner",
-      business: "Electronics Retailer",
-      text: "Finally, a system built specifically for Bangladeshi e-commerce. The WooCommerce integration works perfectly and the insights help me focus on what matters.",
-      metric: "Dev Partner",
-      image: "DP"
-    }
-  ];
-
-
-
   /* const courierPartners = [
     "Pathao", "RedX", "Steadfast"
   ]; */
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 overflow-hidden">
+      <div className="pointer-events-none fixed inset-0 h-full w-full overflow-x-hidden -z-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(16,185,129,0.08),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.06),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(139,92,246,0.04),transparent_70%)]" />
+
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+
+        {/* Premium glow orbs */}
+        {/* <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl animate-pulse" /> */}
+        {/* <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000" /> */}
+      </div>
       {/* Floating WhatsApp CTA */}
       <a
         href="https://wa.me/+8801795665287"
@@ -332,12 +225,12 @@ const OryzaLanding = () => {
         </div>
       </nav>
 
-            {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative pt-28 pb-28 overflow-hidden isolate min-h-[100svh] md:min-h-[100vh] flex items-center justify-center">
         {/* Hyperspeed Background */}
         <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
           {/* <div className="w-full h-full"> */}
-            <Hyperspeed effectOptions={hyperspeedOptions} />
+          <Hyperspeed effectOptions={hyperspeedOptions} />
           {/* </div> */}
         </div>
         <div className="relative container mx-auto px-6">
@@ -495,13 +388,13 @@ const OryzaLanding = () => {
           <a href="#problems" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 backdrop-blur-md">
             <span className="text-sm font-medium">Scroll to bottom</span>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M6 9l6 6 6-6"/>
+              <path d="M6 9l6 6 6-6" />
             </svg>
           </a>
         </div>
       </section>
       {/* Hero bottom blend into next section */}
-      
+
 
       {/* Trusted Brands */}
       {/* <section className="py-8 bg-gray-50 border-t border-b">
@@ -520,408 +413,20 @@ const OryzaLanding = () => {
 
 
       {/* Problems Section */}
-      <section className="relative overflow-hidden py-20 " id='problems'>
-        {/* Background glows */}
-        {/* <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-24 -right-24 w-[26rem] h-[26rem] rounded-full bg-red-600/10 blur-[100px] animate-blob" />
-          <div className="absolute bottom-0 -left-24 w-[30rem] h-[30rem] rounded-full bg-orange-500/10 blur-[110px] animate-blob-slow animation-delay-2s" />
-        </div> */}
-        <div className="relative container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display tracking-tight">
-              Running an E-commerce Business <br/> <span className="text-red-600">Shouldn't Be This Hard!</span>
-            </h2>
-            <p className="text-xl text-gray-300">Common challenges every e-commerce owner faces daily</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {painPoints.map((problem, idx) => (
-              <div key={idx} className="group p-8 bg-gray-900 rounded-3xl border border-gray-800 hover:border-red-500/40 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-red-900/30 to-orange-900/30 rounded-full opacity-30"></div>
-                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <motion.div
-                    animate={{
-                      y: problem.icon === DollarSign ? [0, -3, 0] : 
-                         problem.icon === BarChart3 ? [0, 2, -2, 0] :
-                         problem.icon === Clock ? [0, 0, 0] :
-                         problem.icon === AlertTriangle ? [0, -1, 1, 0] :
-                         problem.icon === Package ? [0, 1, -1, 0] :
-                         [0, -2, 2, 0], // Users
-                      rotate: problem.icon === DollarSign ? [0, 5, -5, 0] :
-                              problem.icon === AlertTriangle ? [0, -3, 3, 0] :
-                              problem.icon === Clock ? [0, 360] :
-                              [0, 2, -2, 0],
-                      scale: problem.icon === Package ? [1, 1.1, 1] : [1, 1.05, 1]
-                    }}
-                    transition={{
-                      duration: problem.icon === Clock ? 8 : 
-                               problem.icon === DollarSign ? 2 :
-                               problem.icon === AlertTriangle ? 1.8 : 3,
-                      repeat: Infinity,
-                      ease: problem.icon === Clock ? "linear" : "easeInOut"
-                    }}
-                  >
-                    <problem.icon className={`w-8 h-8 ${problem.color}`} />
-                  </motion.div>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">{problem.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{problem.desc}</p>
-                {/* <div className="mt-4 flex items-center text-red-500 font-semibold text-sm">
-                  <AlertTriangle className="w-4 h-4 mr-1" />
-                  Common Issue
-                </div> */}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProblemsSection />
 
       {/* Comprehensive Features Overview */}
       <ComprehensiveFeaturesOverview />
 
+      {/* <TheSolutionSection /> */}
+
       {/* Features Section */}
-      <section id="features" className="relative overflow-hidden py-20 "> {/* bg-gradient-to-br from-gray-900 to-gray-950 */}
-        {/* Background glows */}
-        {/*  <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-24 -left-16 w-[26rem] h-[26rem] rounded-full bg-green-500/15 blur-[100px] animate-blob" />
-          <div className="absolute top-1/2 -right-24 w-[30rem] h-[30rem] rounded-full bg-blue-500/15 blur-[110px] animate-blob-slow animation-delay-2s" />
-        </div> */}
-        <div className="relative container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display tracking-tight">
-              <span className="text-green-600">Smart Features</span> for Modern Business Owners
-            </h2>
-            <p className="text-xl text-gray-300">Built with advanced technology to help you make better business decisions</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {features.map((feature, idx) => (
-              <div key={idx} className={`group p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${feature.highlight ? 'ring-2 ring-green-500 relative bg-gradient-to-br from-green-950/40 to-blue-900/20' : 'bg-gray-900 border border-gray-800'
-                }`}>
-                {/* {feature.highlight && (
-                  <div className="absolute -top-3 left-6 px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg">
-                    🤖 AI POWERED
-                  </div>
-                )} */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 ${feature.highlight
-                    ? 'bg-gradient-to-r from-green-500 to-blue-500'
-                    : 'bg-gradient-to-r from-gray-800 to-gray-700 group-hover:from-green-500 group-hover:to-blue-500'
-                    }`}>
-                    <motion.div
-                      animate={{
-                        scale: feature.icon === Bot ? [1, 1.15, 1] :
-                               feature.icon === Package ? [1, 1.05, 1] :
-                               feature.icon === Users ? [1, 1.08, 1] :
-                               feature.icon === TrendingUp ? [1, 1.06, 1] :
-                               feature.icon === BarChart3 ? [1, 1.04, 1] :
-                               feature.icon === Truck ? [1, 1.02, 1] :
-                               feature.icon === FileText ? [1, 1.03, 1] :
-                               feature.icon === DollarSign ? [1, 1.1, 1] :
-                               [1, 1.05, 1], // Shield
-                        rotate: feature.icon === Bot ? [0, 8, -8, 0] :
-                                feature.icon === DollarSign ? [0, 10, -10, 0] :
-                                feature.icon === TrendingUp ? [0, 3, -3, 0] :
-                                feature.icon === Shield ? [0, -4, 4, 0] :
-                                [0, 2, -2, 0],
-                        y: feature.icon === TrendingUp ? [0, -2, 0] :
-                           feature.icon === Truck ? [0, -1, 0] :
-                           [0, 0, 0],
-                        x: feature.icon === Truck ? [0, 1, -1, 0] :
-                           feature.icon === Users ? [0, 0.5, -0.5, 0] :
-                           [0, 0, 0]
-                      }}
-                      transition={{
-                        duration: feature.icon === Bot ? 3.5 :
-                                 feature.icon === DollarSign ? 2.2 :
-                                 feature.icon === TrendingUp ? 2.8 :
-                                 feature.icon === Truck ? 2.6 :
-                                 feature.icon === Users ? 2.4 :
-                                 3.0,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <feature.icon className={`w-7 h-7 transition-colors duration-300 ${feature.highlight ? 'text-white' : 'text-gray-300 group-hover:text-white'}`} />
-                    </motion.div>
-                  </div>
-                  <div className="text-xs font-semibold text-gray-300 bg-gray-800 px-2 py-1 rounded-full">
-                    {feature.category}
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Integration Partners */}
-          {/* <div className="mt-20 text-center">
-            <div className="bg-gray-900/70 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-gray-800">
-              <h3 className="text-2xl font-bold text-white mb-8 flex items-center justify-center">
-                <Truck className="w-6 h-6 mr-3 text-green-600" />
-                সকল জনপ্রিয় কুরিয়ার সার্ভিসের সাথে Integration
-              </h3>
-              <div className="flex flex-row justify-center w-full gap-4">
-                {courierPartners.map((courier, idx) => (
-                  <div key={idx} className="group bg-gradient-to-r from-green-950/30 to-blue-900/20 hover:from-green-900/40 hover:to-blue-900/40 p-4 rounded-xl border border-transparent hover:border-green-700/40 transition-all duration-300 transform hover:-translate-y-1 w-full">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-2 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-md">
-                      <Truck className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-semibold text-gray-200 text-sm">{courier}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-400 mt-6 text-sm">আরও courier partners যোগ হচ্ছে শীঘ্রই...</p>
-            </div>
-          </div> */}
-        </div>
-      </section>
-
-      {/* Early Testimonials */}
-      <section className="relative overflow-hidden py-20 ">
-        {/* Background glows */}
-        {/*   <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-16 right-1/4 w-[24rem] h-[24rem] rounded-full bg-green-500/10 blur-[100px] animate-blob" />
-          <div className="absolute bottom-0 left-1/5 w-[28rem] h-[28rem] rounded-full bg-blue-500/10 blur-[110px] animate-blob-slow animation-delay-2s" />
-        </div> */}
-        <div className="relative container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display tracking-tight">
-              Early <span className="text-green-600">Feedback</span>
-            </h2>
-            <p className="text-xl text-gray-300">What our early users and development partners are saying</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, idx) => (
-              <div key={idx} className="group bg-gray-900 p-8 rounded-3xl shadow-xl border border-gray-800 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-green-900/30 to-blue-900/30 rounded-full opacity-30"></div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    {testimonial.image}
-                  </div>
-                  <div>
-                    <div className="font-bold text-white text-lg">{testimonial.name}</div>
-                    <div className="text-gray-300">{testimonial.business}</div>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Quote className="w-6 h-6 text-green-600" />
-                </div>
-                <p className="text-gray-300 mb-6 italic leading-relaxed text-lg">"{testimonial.text}"</p>
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-bold shadow-lg">
-                  ⭐ {testimonial.metric}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FullFeatures />
 
       {/* AI Demo Section */}
-      <section id="ai-demo" className="relative overflow-hidden py-20 "> {/* bg-gradient-to-br from-gray-900 to-gray-950 */}
-        {/* Background glows */}
-        {/*  <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-24 left-1/5 w-[26rem] h-[26rem] rounded-full bg-emerald-500/12 blur-[100px] animate-blob" />
-          <div className="absolute -bottom-20 right-1/6 w-[30rem] h-[30rem] rounded-full bg-blue-500/12 blur-[110px] animate-blob-slow animation-delay-2s" />
-        </div> */}
-        <div className="relative container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display tracking-tight">
-              <span className="text-green-600">AI Business Intelligence</span> {/* in Action */}
-            </h2>
-            <p className="text-xl text-gray-300">Ask natural language questions and get instant visual insights from your real business data</p>
-          </div>
-
-          <div className="max-w-6xl mx-auto">
-            {/* AI Interface Demo */}
-            <div className="bg-gray-900 rounded-2xl shadow-2xl overflow-hidden mb-8 border border-gray-800">
-              {/* AI Chat Interface Header */}
-              <div className="bg-gradient-to-r from-green-600 to-blue-600 px-6 py-4 flex items-center">
-                <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-                  <span className="text-white font-bold">💰</span>
-                </div>
-                <div className="text-white">
-                  <div className="font-semibold">AI Business Intelligence</div>
-                  <div className="text-sm opacity-90">Natural language analytics • Real-time insights • AI-powered analytics</div>
-                </div>
-                <div className="ml-auto flex space-x-1">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                </div>
-              </div>
-
-              {/* User Input */}
-              <div className="p-6 border-b border-gray-800 bg-gray-950">
-                <div className="bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-800">
-                  <p className="text-gray-200 font-medium">show me yesterday's top selling products</p>
-                  <div className="flex justify-between items-center mt-3 text-sm text-gray-400">
-                    <span>Press Enter to analyze • Shift+Enter for new line</span>
-                    <div className="flex space-x-2">
-                      <button className="btn btn-outline btn-sm">⚡ Quick Insights</button>
-                      <button className="btn btn-primary btn-sm">✨ Analyze</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Results */}
-              <div className="p-6">
-                {/* Chart Title */}
-                <div className="flex items-center mb-6">
-                  <BarChart3 className="w-5 h-5 text-green-600 mr-2" />
-                  <h3 className="text-xl font-bold text-white">Top Selling Products Yesterday</h3>
-                  <div className="ml-auto text-sm text-gray-500">Chart Type: BarChart | Sales Performance</div>
-                </div>
-
-                {/* Actual Chart Visualization */}
-                <div className="bg-gray-900 rounded-xl p-8 mb-6 border border-gray-800">
-                  <div className="grid grid-cols-10 gap-2 items-end h-48">
-                    <div className="bg-blue-600 rounded-t" style={{ height: '85%' }}></div>
-                    <div className="bg-blue-500 rounded-t" style={{ height: '75%' }}></div>
-                    <div className="bg-blue-500 rounded-t" style={{ height: '68%' }}></div>
-                    <div className="bg-green-500 rounded-t" style={{ height: '62%' }}></div>
-                    <div className="bg-green-500 rounded-t" style={{ height: '58%' }}></div>
-                    <div className="bg-green-400 rounded-t" style={{ height: '52%' }}></div>
-                    <div className="bg-green-400 rounded-t" style={{ height: '45%' }}></div>
-                    <div className="bg-green-400 rounded-t" style={{ height: '38%' }}></div>
-                    <div className="bg-gray-400 rounded-t" style={{ height: '25%' }}></div>
-                    <div className="bg-gray-300 rounded-t" style={{ height: '15%' }}></div>
-                  </div>
-                  <div className="grid grid-cols-10 gap-2 mt-4 text-xs text-gray-300 text-center">
-                    <div>Product A</div>
-                    <div>Product B</div>
-                    <div>Product C</div>
-                    <div>Product D</div>
-                    <div>Product E</div>
-                    <div>Product F</div>
-                    <div>Product G</div>
-                    <div>Product H</div>
-                    <div>Product I</div>
-                    <div>More...</div>
-                  </div>
-                </div>
-
-                {/* Data Table */}
-                <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
-                  <div className="bg-gradient-to-r from-green-600 to-blue-600 px-6 py-3 flex items-center justify-between">
-                    <div className="flex items-center text-white">
-                      <FileText className="w-4 h-4 mr-2" />
-                      <span className="font-semibold">Results Table</span>
-                    </div>
-                    <button className="btn btn-white btn-sm">📊 Export CSV</button>
-                  </div>
-                  <div className="p-6">
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <input
-                        placeholder="Search results..."
-                        className="px-3 py-2 bg-gray-950 border border-gray-800 text-gray-200 rounded-lg text-sm placeholder:text-gray-500"
-                      />
-                      <select className="px-3 py-2 bg-gray-950 border border-gray-800 text-gray-200 rounded-lg text-sm">
-                        <option>All Columns</option>
-                      </select>
-                    </div>
-                    <div className="overflow-x-auto">
-                      <table className="w-full">
-                        <thead>
-                          <tr className="border-b border-gray-800">
-                            <th className="text-left py-3 px-4 font-semibold text-gray-300">📦 PRODUCT NAME</th>
-                            <th className="text-right py-3 px-4 font-semibold text-gray-300">#️⃣ TOTAL QUANTITY SOLD</th>
-                          </tr>
-                        </thead>
-                        <tbody className="text-sm">
-                          <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Product A</td>
-                            <td className="py-3 px-4 text-right font-semibold text-gray-100">410</td>
-                          </tr>
-                          <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Product B</td>
-                            <td className="py-3 px-4 text-right font-semibold text-gray-100">274</td>
-                          </tr>
-                          <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Product C</td>
-                            <td className="py-3 px-4 text-right font-semibold text-gray-100">249</td>
-                          </tr>
-                          <tr className="border-b border-gray-800 hover:bg-gray-900/60">
-                            <td className="py-3 px-4 text-gray-100">Product D</td>
-                            <td className="py-3 px-4 text-right font-semibold text-gray-100">238</td>
-                          </tr>
-                          <tr>
-                            <td className="py-3 px-4 text-gray-500">Showing 1 to 10 of 16 results</td>
-                            <td className="py-3 px-4 text-right text-gray-500">Page 1 of 2</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Features */}
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <motion.div
-                  animate={{
-                    rotate: [0, 15, -15, 0],
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="mx-auto mb-3"
-                >
-                  <Search className="w-8 h-8 text-blue-400" />
-                </motion.div>
-                <h3 className="font-bold text-white mb-2">Natural Language Queries</h3>
-                <p className="text-gray-300 text-sm">Ask questions just like you would ask a human analyst</p>
-              </div>
-              <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <motion.div
-                  animate={{
-                    rotate: [0, 360],
-                    scale: [1, 1.05, 1],
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  className="mx-auto mb-3"
-                >
-                  <PieChart className="w-8 h-8 text-green-400" />
-                </motion.div>
-                <h3 className="font-bold text-white mb-2">Instant Visualizations</h3>
-                <p className="text-gray-300 text-sm">Get beautiful charts and graphs generated automatically</p>
-              </div>
-              <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <motion.div
-                  animate={{
-                    y: [0, -3, 0],
-                    scale: [1, 1.08, 1],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="mx-auto mb-3"
-                >
-                  <Database className="w-8 h-8 text-blue-400" />
-                </motion.div>
-                <h3 className="font-bold text-white mb-2">Exportable Data Tables</h3>
-                <p className="text-gray-300 text-sm">Download your results as CSV for further analysis</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AiPreviewSection />
+      {/* Early Testimonials */}
+      <ReviewsSection />
 
       {/* CTA Section */}
       <section className="relative overflow-hidden py-20 bg-gradient-to-r from-green-600 to-blue-600">
@@ -944,17 +449,21 @@ const OryzaLanding = () => {
             </div>
 
             <div className="flex justify-center items-center space-x-6 text-blue-100">
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
                 <span>Free Trial</span>
-              </div>
+              </div> */}
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span>No Setup Required</span>
+                <span>Fast Setup</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
                 <span>AI-Powered Analytics</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span>Data Migration</span>
               </div>
             </div>
           </div>
@@ -986,8 +495,11 @@ const OryzaLanding = () => {
                   <path d="M20.52 3.48A11.94 11.94 0 0012 .04C5.37.04.02 5.39.02 12.03c0 2.12.56 4.19 1.63 6.01L.05 24l6.12-1.6a12.02 12.02 0 005.83 1.51h.01c6.63 0 12-5.36 12-11.97a11.93 11.93 0 00-3.49-8.46zM12 21.5h-.01a9.46 9.46 0 01-4.82-1.32l-.35-.2-3.63.95.97-3.54-.22-.36a9.45 9.45 0 01-1.46-5.04c0-5.22 4.26-9.48 9.5-9.48a9.45 9.45 0 016.72 2.78 9.42 9.42 0 012.79 6.7c0 5.22-4.26 9.48-9.5 9.48zm5.48-7.17c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.94 1.16-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.49.71.3 1.26.48 1.7.62.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42z" />
                 </svg>
               </a>
-              <a href="mailto:hello@pyzasoft.com" className="p-3 bg-gray-900 rounded-full hover:bg-red-600 transition-colors border border-gray-800" aria-label="Email">
+              <a href="mailto:contact@pyzasoft.com" className="p-3 bg-gray-900 rounded-full hover:bg-red-600 transition-colors border border-gray-800" aria-label="Email">
                 <Mail className="w-5 h-5" aria-hidden="true" />
+              </a>
+              <a href="tel:+8801795665287" className="p-3 bg-gray-900 rounded-full hover:bg-orange-600 transition-colors border border-gray-800" aria-label="Email">
+                <Phone className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
