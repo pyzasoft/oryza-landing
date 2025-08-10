@@ -285,12 +285,15 @@ const OryzaLanding = () => {
     <div className="min-h-screen bg-gray-950 text-gray-100 overflow-hidden">
       {/* Floating WhatsApp CTA */}
       <a
-        href="https://wa.me/+8801700000000"
+        href="https://wa.me/+8801795665287"
         target="_blank"
         rel="noopener"
-        className="fixed bottom-6 right-6 z-50 btn btn-whatsapp btn-lg shadow-2xl"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20B358] rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
+        aria-label="Chat on WhatsApp"
       >
-        Chat on WhatsApp
+        <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.52 3.48A11.94 11.94 0 0012 .04C5.37.04.02 5.39.02 12.03c0 2.12.56 4.19 1.63 6.01L.05 24l6.12-1.6a12.02 12.02 0 005.83 1.51h.01c6.63 0 12-5.36 12-11.97a11.93 11.93 0 00-3.49-8.46zM12 21.5h-.01a9.46 9.46 0 01-4.82-1.32l-.35-.2-3.63.95.97-3.54-.22-.36a9.45 9.45 0 01-1.46-5.04c0-5.22 4.26-9.48 9.5-9.48a9.45 9.45 0 016.72 2.78 9.42 9.42 0 012.79 6.7c0 5.22-4.26 9.48-9.5 9.48zm5.48-7.17c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.94 1.16-.17.2-.34.22-.63.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.08c.15.2 2.09 3.2 5.08 4.49.71.3 1.26.48 1.7.62.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42z" />
+        </svg>
       </a>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900 shadow-lg' : 'bg-gray-900/70 backdrop-blur-md'}`}>
@@ -314,9 +317,15 @@ const OryzaLanding = () => {
                 WhatsApp Us
               </a>
             </div>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-lg hover:bg-gray-800">
+            {/* Mobile WhatsApp button instead of hamburger menu */}
+            <div className="md:hidden">
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-sm">
+                WhatsApp Us
+              </a>
+            </div>
+            {/* <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-lg hover:bg-gray-800">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>

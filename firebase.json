@@ -1,6 +1,5 @@
 {
     "hosting": {
-        "site": "oryza-landing",
         "public": "dist",
         "ignore": [
             "firebase.json",
