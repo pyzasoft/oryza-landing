@@ -1,14 +1,14 @@
 import { useState, useEffect, useMemo } from 'react';
 import {
   Package, Users, TrendingUp, BarChart3, Truck, FileText,
-  Shield, Zap, CheckCircle, Menu, X, Mail,
+  Shield, Zap, CheckCircle, Mail,
   AlertTriangle, Clock, DollarSign, Quote, Bot,
   PieChart, Search, Database
 } from 'lucide-react';
 import Hyperspeed from './blocks/Backgrounds/Hyperspeed/Hyperspeed';
 
 const OryzaLanding = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [viewport, setViewport] = useState<'mobile' | 'laptop' | 'desktop'>(() => {
     if (typeof window === 'undefined') return 'desktop';
