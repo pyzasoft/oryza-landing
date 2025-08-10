@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { motion } from 'motion/react';
 import {
   Package, Users, TrendingUp, BarChart3, Truck, FileText,
   Shield, Zap, CheckCircle, Mail,
@@ -6,6 +7,7 @@ import {
   PieChart, Search, Database
 } from 'lucide-react';
 import Hyperspeed from './blocks/Backgrounds/Hyperspeed/Hyperspeed';
+import ComprehensiveFeaturesOverview from './components/ComprehensiveFeaturesOverview';
 
 const OryzaLanding = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -370,7 +372,19 @@ const OryzaLanding = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
               <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Bot className="w-6 h-6 text-white" />
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 5, -5, 0],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Bot className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">AI-Powered</div>
                 <div className="text-sm text-gray-300">Smart Analytics & Insights</div>
@@ -381,7 +395,19 @@ const OryzaLanding = () => {
 
               <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="w-6 h-6 text-white" />
+                  <motion.div
+                    animate={{
+                      y: [0, -2, 0],
+                      rotate: [0, 2, -2, 0],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <TrendingUp className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Real-time</div>
                 <div className="text-sm text-gray-300">Live Business Monitoring</div>
@@ -392,7 +418,19 @@ const OryzaLanding = () => {
 
               <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-6 h-6 text-white" />
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.05, 1],
+                      x: [0, 1, -1, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Users className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Complete</div>
                 <div className="text-sm text-gray-300">End-to-End Management</div>
@@ -403,7 +441,19 @@ const OryzaLanding = () => {
 
               <div className="group bg-white/5 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+                  <motion.div
+                    animate={{
+                      rotate: [0, 10, -10, 0],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <Zap className="w-6 h-6 text-white" />
+                  </motion.div>
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">Fast Setup</div>
                 <div className="text-sm text-gray-300">Easy to start </div>
@@ -479,7 +529,7 @@ const OryzaLanding = () => {
         <div className="relative container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-display tracking-tight">
-              Running an E-commerce Business <span className="text-red-600">Shouldn't Be This Hard</span>
+              Running an E-commerce Business <br/> <span className="text-red-600">Shouldn't Be This Hard!</span>
             </h2>
             <p className="text-xl text-gray-300">Common challenges every e-commerce owner faces daily</p>
           </div>
@@ -489,7 +539,30 @@ const OryzaLanding = () => {
               <div key={idx} className="group p-8 bg-gray-900 rounded-3xl border border-gray-800 hover:border-red-500/40 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-red-900/30 to-orange-900/30 rounded-full opacity-30"></div>
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <problem.icon className={`w-8 h-8 ${problem.color}`} />
+                  <motion.div
+                    animate={{
+                      y: problem.icon === DollarSign ? [0, -3, 0] : 
+                         problem.icon === BarChart3 ? [0, 2, -2, 0] :
+                         problem.icon === Clock ? [0, 0, 0] :
+                         problem.icon === AlertTriangle ? [0, -1, 1, 0] :
+                         problem.icon === Package ? [0, 1, -1, 0] :
+                         [0, -2, 2, 0], // Users
+                      rotate: problem.icon === DollarSign ? [0, 5, -5, 0] :
+                              problem.icon === AlertTriangle ? [0, -3, 3, 0] :
+                              problem.icon === Clock ? [0, 360] :
+                              [0, 2, -2, 0],
+                      scale: problem.icon === Package ? [1, 1.1, 1] : [1, 1.05, 1]
+                    }}
+                    transition={{
+                      duration: problem.icon === Clock ? 8 : 
+                               problem.icon === DollarSign ? 2 :
+                               problem.icon === AlertTriangle ? 1.8 : 3,
+                      repeat: Infinity,
+                      ease: problem.icon === Clock ? "linear" : "easeInOut"
+                    }}
+                  >
+                    <problem.icon className={`w-8 h-8 ${problem.color}`} />
+                  </motion.div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">{problem.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{problem.desc}</p>
@@ -504,96 +577,7 @@ const OryzaLanding = () => {
       </section>
 
       {/* Comprehensive Features Overview */}
-      <section className="relative overflow-hidden py-20 ">
-        {/* Background glows */}
-        {/*   <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-20 left-1/4 w-[28rem] h-[28rem] rounded-full bg-blue-500/10 blur-[100px] animate-blob" />
-          <div className="absolute -bottom-24 right-1/4 w-[24rem] h-[24rem] rounded-full bg-emerald-500/10 blur-[100px] animate-blob-slow animation-delay-2s" />
-        </div> */}
-        <div className="relative container mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-3xl md:text-3xl font-bold text-white mb-4">The Solution to Your Problems?</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Complete <span className="text-green-600">E-commerce Management</span> System
-            </h2>
-            <p className="text-xl text-gray-300">Everything you need to run and scale your online business</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="group bg-gradient-to-br from-blue-950/40 to-blue-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-blue-900/30">
-              <Package className="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">WooCommerce Integration</h3>
-              <p className="text-xs text-gray-300">Automatic order fetching</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-green-950/40 to-green-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-green-900/30">
-              <Users className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Team Assignment</h3>
-              <p className="text-xs text-gray-300">Assign orders to members</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-teal-950/40 to-teal-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-teal-900/30">
-              <TrendingUp className="w-8 h-8 text-teal-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Order Lifecycle</h3>
-              <p className="text-xs text-gray-300">End-to-end tracking</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-red-950/40 to-red-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-red-900/30">
-              <BarChart3 className="w-8 h-8 text-red-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Business Reports</h3>
-              <p className="text-xs text-gray-300">Comprehensive analytics</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-orange-950/40 to-orange-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-orange-900/30">
-              <Bot className="w-8 h-8 text-orange-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">AI Dashboard</h3>
-              <p className="text-xs text-gray-300">Smart analytics</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-cyan-950/40 to-cyan-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-cyan-900/30">
-              <Package className="w-8 h-8 text-cyan-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Stock Management</h3>
-              <p className="text-xs text-gray-300">Inventory tracking</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-yellow-950/40 to-yellow-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-yellow-900/30">
-              <DollarSign className="w-8 h-8 text-yellow-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Profit Analysis</h3>
-              <p className="text-xs text-gray-300">Real-time calculations</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-indigo-950/40 to-indigo-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-indigo-900/30">
-              <Truck className="w-8 h-8 text-indigo-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Bulk Delivery</h3>
-              <p className="text-xs text-gray-300">Multiple courier assign</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-emerald-950/40 to-emerald-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-emerald-900/30">
-              <Users className="w-8 h-8 text-emerald-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Customer History</h3>
-              <p className="text-xs text-gray-300">Complete order records</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-teal-950/40 to-teal-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-teal-900/30">
-              <Truck className="w-8 h-8 text-teal-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Courier Integration</h3>
-              <p className="text-xs text-gray-300">Direct sending</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-900/40 to-gray-800/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-800/30">
-              <FileText className="w-8 h-8 text-gray-300 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Bulk Invoice</h3>
-              <p className="text-xs text-gray-300">Mass generation</p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-emerald-950/40 to-emerald-900/20 p-4 rounded-2xl text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-emerald-900/30">
-              <FileText className="w-8 h-8 text-emerald-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-bold text-white text-sm mb-1">Print & Memo</h3>
-              <p className="text-xs text-gray-300">Delivery slips & memos</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ComprehensiveFeaturesOverview />
 
       {/* Features Section */}
       <section id="features" className="relative overflow-hidden py-20 "> {/* bg-gradient-to-br from-gray-900 to-gray-950 */}
@@ -624,7 +608,42 @@ const OryzaLanding = () => {
                     ? 'bg-gradient-to-r from-green-500 to-blue-500'
                     : 'bg-gradient-to-r from-gray-800 to-gray-700 group-hover:from-green-500 group-hover:to-blue-500'
                     }`}>
-                    <feature.icon className={`w-7 h-7 transition-colors duration-300 ${feature.highlight ? 'text-white' : 'text-gray-300 group-hover:text-white'}`} />
+                    <motion.div
+                      animate={{
+                        scale: feature.icon === Bot ? [1, 1.15, 1] :
+                               feature.icon === Package ? [1, 1.05, 1] :
+                               feature.icon === Users ? [1, 1.08, 1] :
+                               feature.icon === TrendingUp ? [1, 1.06, 1] :
+                               feature.icon === BarChart3 ? [1, 1.04, 1] :
+                               feature.icon === Truck ? [1, 1.02, 1] :
+                               feature.icon === FileText ? [1, 1.03, 1] :
+                               feature.icon === DollarSign ? [1, 1.1, 1] :
+                               [1, 1.05, 1], // Shield
+                        rotate: feature.icon === Bot ? [0, 8, -8, 0] :
+                                feature.icon === DollarSign ? [0, 10, -10, 0] :
+                                feature.icon === TrendingUp ? [0, 3, -3, 0] :
+                                feature.icon === Shield ? [0, -4, 4, 0] :
+                                [0, 2, -2, 0],
+                        y: feature.icon === TrendingUp ? [0, -2, 0] :
+                           feature.icon === Truck ? [0, -1, 0] :
+                           [0, 0, 0],
+                        x: feature.icon === Truck ? [0, 1, -1, 0] :
+                           feature.icon === Users ? [0, 0.5, -0.5, 0] :
+                           [0, 0, 0]
+                      }}
+                      transition={{
+                        duration: feature.icon === Bot ? 3.5 :
+                                 feature.icon === DollarSign ? 2.2 :
+                                 feature.icon === TrendingUp ? 2.8 :
+                                 feature.icon === Truck ? 2.6 :
+                                 feature.icon === Users ? 2.4 :
+                                 3.0,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <feature.icon className={`w-7 h-7 transition-colors duration-300 ${feature.highlight ? 'text-white' : 'text-gray-300 group-hover:text-white'}`} />
+                    </motion.div>
                   </div>
                   <div className="text-xs font-semibold text-gray-300 bg-gray-800 px-2 py-1 rounded-full">
                     {feature.category}
@@ -846,17 +865,56 @@ const OryzaLanding = () => {
             {/* Key Features */}
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <Search className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <motion.div
+                  animate={{
+                    rotate: [0, 15, -15, 0],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="mx-auto mb-3"
+                >
+                  <Search className="w-8 h-8 text-blue-400" />
+                </motion.div>
                 <h3 className="font-bold text-white mb-2">Natural Language Queries</h3>
                 <p className="text-gray-300 text-sm">Ask questions just like you would ask a human analyst</p>
               </div>
               <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <PieChart className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <motion.div
+                  animate={{
+                    rotate: [0, 360],
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="mx-auto mb-3"
+                >
+                  <PieChart className="w-8 h-8 text-green-400" />
+                </motion.div>
                 <h3 className="font-bold text-white mb-2">Instant Visualizations</h3>
                 <p className="text-gray-300 text-sm">Get beautiful charts and graphs generated automatically</p>
               </div>
               <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
-                <Database className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                <motion.div
+                  animate={{
+                    y: [0, -3, 0],
+                    scale: [1, 1.08, 1],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="mx-auto mb-3"
+                >
+                  <Database className="w-8 h-8 text-blue-400" />
+                </motion.div>
                 <h3 className="font-bold text-white mb-2">Exportable Data Tables</h3>
                 <p className="text-gray-300 text-sm">Download your results as CSV for further analysis</p>
               </div>
