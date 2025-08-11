@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import {
   Users, TrendingUp,
@@ -17,6 +18,7 @@ import FullFeatures from './components/FullFeatures';
 
 const OryzaLanding = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [viewport, setViewport] = useState<'mobile' | 'laptop' | 'desktop'>(() => {
     if (typeof window === 'undefined') return 'desktop';
@@ -206,17 +208,39 @@ const OryzaLanding = () => {
 
             <div className="hidden md:flex items-center space-x-8">
               {/* <a href="#ai-demo" className="text-gray-300 hover:text-green-400 font-medium">AI Demo</a> */}
-              <a href="#features" className="text-gray-300 hover:text-green-400 font-medium">Features</a>
+              <a href="#features" className="text-gray-300 hover:text-green-400 font-medium">{t('nav.features')}</a>
               {/* <a href="#pricing" className="text-gray-300 hover:text-green-400 font-medium">Pricing</a> */}
               <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp">
-                WhatsApp Us
+                {t('nav.whatsapp')}
               </a>
+              <div className="flex items-center gap-1 bg-gray-800/60 rounded-lg p-1 border border-gray-700">
+                <button
+                  onClick={() => { i18n.changeLanguage('en'); localStorage.setItem('lng', 'en'); }}
+                  className={`px-2 py-1 rounded-md text-sm ${i18n.language === 'en' ? 'bg-gray-700 text-white' : 'text-gray-300 hover:text-white'}`}
+                >EN</button>
+                <button
+                  onClick={() => { i18n.changeLanguage('bn'); localStorage.setItem('lng', 'bn'); }}
+                  className={`px-2 py-1 rounded-md text-sm ${i18n.language === 'bn' ? 'bg-gray-700 text-white' : 'text-gray-300 hover:text-white'}`}
+                >বাংলা</button>
+              </div>
             </div>
             {/* Mobile WhatsApp button instead of hamburger menu */}
             <div className="md:hidden">
-              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-sm">
-                WhatsApp Us
-              </a>
+              <div className="flex items-center gap-2">
+                <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-sm">
+                  {t('nav.whatsapp')}
+                </a>
+                <div className="flex items-center gap-1 bg-gray-800/60 rounded-lg p-1 border border-gray-700">
+                  <button
+                    onClick={() => { i18n.changeLanguage('en'); localStorage.setItem('lng', 'en'); }}
+                    className={`px-2 py-1 rounded-md text-xs ${i18n.language === 'en' ? 'bg-gray-700 text-white' : 'text-gray-300 hover:text-white'}`}
+                  >EN</button>
+                  <button
+                    onClick={() => { i18n.changeLanguage('bn'); localStorage.setItem('lng', 'bn'); }}
+                    className={`px-2 py-1 rounded-md text-xs ${i18n.language === 'bn' ? 'bg-gray-700 text-white' : 'text-gray-300 hover:text-white'}`}
+                  >বাংলা</button>
+                </div>
+              </div>
             </div>
             {/* <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 rounded-lg hover:bg-gray-800">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -242,23 +266,21 @@ const OryzaLanding = () => {
             </div> */}
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight font-display">
-              <span className="text-shimmer">Stop Guessing.</span> <br />
-              Start <span className="relative bg-gradient-to-r from-green-500 via-emerald-400 to-blue-500 bg-clip-text text-transparent">
-                Growing
+              <span className="text-shimmer">{t('hero.titleLine1')}</span> <br />
+              {t('hero.titleLine2Part1')} <span className="relative bg-gradient-to-r from-green-500 via-emerald-400 to-blue-500 bg-clip-text text-transparent">
+                {t('hero.titleLine2Part2')}
                 <span className="absolute inset-0 blur-xl opacity-30 bg-gradient-to-r from-green-500 via-emerald-400 to-blue-500 -z-10"></span>
-              </span> Your Business.
+              </span> {t('hero.titleLine2Suffix')}
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              The first e-commerce management system with AI Business Intelligence.
-              Make smarter decisions with real-time insights, optimize your operations, and grow your business with data-driven strategies.
-              {/* Built for Bangladeshi e-commerce. AI Business Intelligence, WooCommerce sync, courier integrations (Pathao, RedX, SA Paribahan) and profit analytics — all in one place. */}
+              {t('hero.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="#ai-demo" className="btn btn-primary btn-lg">AI Business Intelligence</a>
+              <a href="#ai-demo" className="btn btn-primary btn-lg">{t('hero.ctaPrimary')}</a>
               {/* <a href="#features" className="btn btn-outline btn-lg">See Features</a> */}
-              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-outline backdrop-blur-xl btn-lg font-bold">Schedule a Demo</a>
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-outline backdrop-blur-xl btn-lg font-bold">{t('hero.ctaSecondary')}</a>
             </div>
 
             {/* Enhanced Stats Grid */}
@@ -279,8 +301,8 @@ const OryzaLanding = () => {
                     <Bot className="w-6 h-6 text-white" />
                   </motion.div>
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">AI-Powered</div>
-                <div className="text-sm text-gray-300">Smart Analytics & Insights</div>
+                <div className="text-2xl font-bold text-white mb-1">{t('stats.aiPowered')}</div>
+                <div className="text-sm text-gray-300">{t('stats.aiPoweredDesc')}</div>
                 <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full w-full"></div>
                 </div>
@@ -302,8 +324,8 @@ const OryzaLanding = () => {
                     <TrendingUp className="w-6 h-6 text-white" />
                   </motion.div>
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">Real-time</div>
-                <div className="text-sm text-gray-300">Live Business Monitoring</div>
+                <div className="text-2xl font-bold text-white mb-1">{t('stats.realTime')}</div>
+                <div className="text-sm text-gray-300">{t('stats.realTimeDesc')}</div>
                 <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full w-full"></div>
                 </div>
@@ -325,8 +347,8 @@ const OryzaLanding = () => {
                     <Users className="w-6 h-6 text-white" />
                   </motion.div>
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">Complete</div>
-                <div className="text-sm text-gray-300">End-to-End Management</div>
+                <div className="text-2xl font-bold text-white mb-1">{t('stats.complete')}</div>
+                <div className="text-sm text-gray-300">{t('stats.completeDesc')}</div>
                 <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-teal-500 to-cyan-500 h-2 rounded-full w-full"></div>
                 </div>
@@ -348,8 +370,8 @@ const OryzaLanding = () => {
                     <Zap className="w-6 h-6 text-white" />
                   </motion.div>
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">Fast Setup</div>
-                <div className="text-sm text-gray-300">Easy to start </div>
+                <div className="text-2xl font-bold text-white mb-1">{t('stats.fastSetup')}</div>
+                <div className="text-sm text-gray-300">{t('stats.fastSetupDesc')}</div>
                 <div className="mt-auto pt-4 w-full rounded-full h-2">
                   <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full w-full"></div>
                 </div>
@@ -386,7 +408,7 @@ const OryzaLanding = () => {
         {/* Scroll to bottom button */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
           <a href="#problems" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 backdrop-blur-md">
-            <span className="text-sm font-medium">Scroll to bottom</span>
+            <span className="text-sm font-medium">{t('hero.scroll')}</span>
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 9l6 6 6-6" />
             </svg>
@@ -437,14 +459,14 @@ const OryzaLanding = () => {
         <div className="relative container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-display tracking-tight">
-              Ready to Experience AI-Powered Analytics?
+              {t('cta.heading')}
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join our early adopters and be among the first to revolutionize your e-commerce business with AI-powered insights.
+              {t('cta.text')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">Schedule a Demo</a>
+              <a href="https://wa.me/+8801795665287" target="_blank" rel="noopener" className="btn btn-whatsapp btn-lg font-bold">{t('cta.scheduleDemo')}</a>
               {/* <a href="mailto:hello@pyzasoft.com" className="btn btn-outline-white btn-lg">Schedule a Demo</a> */}
             </div>
 
@@ -455,15 +477,15 @@ const OryzaLanding = () => {
               </div> */}
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span>Fast Setup</span>
+                <span>{t('cta.fastSetup')}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span>AI-Powered Analytics</span>
+                <span>{t('cta.aiAnalytics')}</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span>Data Migration</span>
+                <span>{t('cta.dataMigration')}</span>
               </div>
             </div>
           </div>

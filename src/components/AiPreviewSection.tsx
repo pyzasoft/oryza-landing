@@ -1,7 +1,9 @@
 import { BarChart3, FileText, Search, PieChart, Database } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
 export default function AiPreviewSection() {
+    const { t } = useTranslation();
     return (
         <section id="ai-demo" className="relative overflow-hidden pb-20 "> {/* bg-gradient-to-br from-gray-900 to-gray-950 */}
             {/* Background glows */}
@@ -12,9 +14,9 @@ export default function AiPreviewSection() {
             <div className="relative container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-white mb-4 font-display tracking-tight">
-                        <span className="text-green-600">AI Business Intelligence</span> {/* in Action */}
+                        <span className="text-green-600">{t('ai.heading')}</span>
                     </h2>
-                    <p className="text-xl text-gray-300">Ask natural language questions and get instant visual insights from your real business data</p>
+                    <p className="text-xl text-gray-300">{t('ai.subtitle')}</p>
                 </div>
 
                 <div className="max-w-6xl mx-auto">
@@ -26,8 +28,8 @@ export default function AiPreviewSection() {
                                 <span className="text-white font-bold">💰</span>
                             </div>
                             <div className="text-white">
-                                <div className="font-semibold">AI Business Intelligence</div>
-                                <div className="text-sm opacity-90">Natural language analytics • Real-time insights • AI-powered analytics</div>
+                                <div className="font-semibold">{t('ai.headerTitle')}</div>
+                                <div className="text-sm opacity-90">{t('ai.headerSubtitle')}</div>
                             </div>
                             <div className="ml-auto flex space-x-1">
                                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -39,12 +41,12 @@ export default function AiPreviewSection() {
                         {/* User Input */}
                         <div className="p-6 border-b border-gray-800 bg-gray-950">
                             <div className="bg-gray-900 p-4 rounded-xl shadow-sm border border-gray-800">
-                                <p className="text-gray-200 font-medium">show me yesterday's top selling products</p>
+                                <p className="text-gray-200 font-medium">{t('ai.inputSample')}</p>
                                 <div className="flex justify-between items-center mt-3 text-sm text-gray-400">
                                     <span>Press Enter to analyze • Shift+Enter for new line</span>
                                     <div className="flex space-x-2">
                                         {/* <button className="btn btn-outline btn-sm">⚡ Quick Insights</button> */}
-                                        <button className="btn btn-primary btn-sm">Analyze</button>
+                                        <button className="btn btn-primary btn-sm">{t('ai.analyze')}</button>
                                     </div>
                                 </div>
                             </div>
@@ -55,8 +57,8 @@ export default function AiPreviewSection() {
                             {/* Chart Title */}
                             <div className="flex items-center mb-6">
                                 <BarChart3 className="w-5 h-5 text-green-600 mr-2" />
-                                <h3 className="text-xl font-bold text-white">Top Selling Products Yesterday</h3>
-                                <div className="ml-auto text-sm text-gray-500">Chart Type: BarChart | Sales Performance</div>
+                                <h3 className="text-xl font-bold text-white">{t('ai.chartTitle')}</h3>
+                                <div className="ml-auto text-sm text-gray-500">{t('ai.chartMeta')}</div>
                             </div>
 
                             {/* Actual Chart Visualization */}
@@ -92,18 +94,18 @@ export default function AiPreviewSection() {
                                 <div className="bg-gradient-to-r from-green-600 to-blue-600 px-6 py-3 flex items-center justify-between">
                                     <div className="flex items-center text-white">
                                         <FileText className="w-4 h-4 mr-2" />
-                                        <span className="font-semibold">Results Table</span>
+                                        <span className="font-semibold">{t('ai.resultsTable')}</span>
                                     </div>
-                                    <button className="btn btn-white btn-sm">📊 Export CSV</button>
+                                    <button className="btn btn-white btn-sm">📊 {t('ai.exportCsv')}</button>
                                 </div>
                                 <div className="p-6">
                                     <div className="grid grid-cols-2 gap-4 mb-4">
                                         <input
-                                            placeholder="Search results..."
+                                            placeholder={t('ai.searchPlaceholder')!}
                                             className="px-3 py-2 bg-gray-950 border border-gray-800 text-gray-200 rounded-lg text-sm placeholder:text-gray-500"
                                         />
                                         <select className="px-3 py-2 bg-gray-950 border border-gray-800 text-gray-200 rounded-lg text-sm">
-                                            <option>All Columns</option>
+                                            <option>{t('ai.allColumns')}</option>
                                         </select>
                                     </div>
                                     <div className="overflow-x-auto">
@@ -132,8 +134,8 @@ export default function AiPreviewSection() {
                                                     <td className="py-3 px-4 text-right font-semibold text-gray-100">238</td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="py-3 px-4 text-gray-500">Showing 1 to 10 of 16 results</td>
-                                                    <td className="py-3 px-4 text-right text-gray-500">Page 1 of 2</td>
+                                                    <td className="py-3 px-4 text-gray-500">{t('ai.tableShowing')}</td>
+                                                    <td className="py-3 px-4 text-right text-gray-500">{t('ai.tablePage')}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -160,8 +162,8 @@ export default function AiPreviewSection() {
                             >
                                 <Search className="w-8 h-8 text-blue-400" />
                             </motion.div>
-                            <h3 className="font-bold text-white mb-2">Natural Language Queries</h3>
-                            <p className="text-gray-300 text-sm">Ask questions just like you would ask a human analyst</p>
+                            <h3 className="font-bold text-white mb-2">{t('ai.features.queriesTitle')}</h3>
+                            <p className="text-gray-300 text-sm">{t('ai.features.queriesDesc')}</p>
                         </div>
                         <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
                             <motion.div
@@ -178,8 +180,8 @@ export default function AiPreviewSection() {
                             >
                                 <PieChart className="w-8 h-8 text-green-400" />
                             </motion.div>
-                            <h3 className="font-bold text-white mb-2">Instant Visualizations</h3>
-                            <p className="text-gray-300 text-sm">Get beautiful charts and graphs generated automatically</p>
+                            <h3 className="font-bold text-white mb-2">{t('ai.features.vizTitle')}</h3>
+                            <p className="text-gray-300 text-sm">{t('ai.features.vizDesc')}</p>
                         </div>
                         <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-800">
                             <motion.div
@@ -196,8 +198,8 @@ export default function AiPreviewSection() {
                             >
                                 <Database className="w-8 h-8 text-blue-400" />
                             </motion.div>
-                            <h3 className="font-bold text-white mb-2">Exportable Data Tables</h3>
-                            <p className="text-gray-300 text-sm">Download your results as CSV for further analysis</p>
+                            <h3 className="font-bold text-white mb-2">{t('ai.features.tablesTitle')}</h3>
+                            <p className="text-gray-300 text-sm">{t('ai.features.tablesDesc')}</p>
                         </div>
                     </div>
                 </div>

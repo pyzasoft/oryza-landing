@@ -1,74 +1,30 @@
 import { Bot, Package, Users, TrendingUp, BarChart3, Truck, FileText, DollarSign, Shield } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
-const features = [
-    {
-        icon: Bot,
-        title: "AI Business Intelligence",
-        desc: "Ask questions in natural language and get instant charts, insights, and analytics about your business performance, sales trends, and profitability.",
-        highlight: true,
-        category: "AI & Analytics"
-    },
-    {
-        icon: Package,
-        title: "Complete Order Lifecycle Management",
-        desc: "Fetch orders from WooCommerce, assign team members, track from placement to delivery with automated workflows and status updates.",
-        highlight: false,
-        category: "Order Management"
-    },
-    {
-        icon: Users,
-        title: "Team Management & Performance",
-        desc: "Assign orders to team members, track individual performance metrics, conversion rates, and productivity with detailed analytics.",
-        highlight: false,
-        category: "Team Management"
-    },
-    {
-        icon: TrendingUp,
-        title: "Advanced Reporting & Profit Analysis",
-        desc: "Generate comprehensive reports on sales, profit/loss, inventory turnover, and business performance with exportable data.",
-        highlight: false,
-        category: "Analytics & Reports"
-    },
-    {
-        icon: BarChart3,
-        title: "Smart Inventory & Stock Management",
-        desc: "Real-time stock tracking, low inventory alerts, automatic reorder suggestions, and inventory optimization recommendations.",
-        highlight: false,
-        category: "Inventory"
-    },
-    {
-        icon: Truck,
-        title: "Bulk Delivery Partner Operations",
-        desc: "Assign multiple orders to delivery partners in bulk, track shipments, and manage courier partnerships with Pathao, RedX, SA Paribahan.",
-        highlight: false,
-        category: "Logistics"
-    },
-    {
-        icon: FileText,
-        title: "Customer Order History & CRM",
-        desc: "Complete customer profiles with order history, purchase patterns, and personalized insights for better customer relationship management.",
-        highlight: false,
-        category: "Customer Management"
-    },
-    {
-        icon: DollarSign,
-        title: "Automated Invoicing & Documentation",
-        desc: "Bulk invoice generation, delivery slip printing, memo creation, and automated documentation for seamless order processing.",
-        highlight: false,
-        category: "Documentation"
-    },
-    {
-        icon: Shield,
-        title: "Fraud Detection & Security",
-        desc: "Duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
-        highlight: false,
-        category: "Security"
-    }
-];
+import type { LucideIcon } from 'lucide-react';
+
+type FeatureItem = {
+    icon: LucideIcon;
+    title: string;
+    desc: string;
+    highlight: boolean;
+    category: string;
+};
+
+const featureIcons = [Bot, Package, Users, TrendingUp, BarChart3, Truck, FileText, DollarSign, Shield];
 
 
 export default function FullFeatures() {
+    const { t } = useTranslation();
+    const items = t('fullFeatures.items', { returnObjects: true }) as Array<Pick<FeatureItem, 'title' | 'desc' | 'category'>>;
+    const features: FeatureItem[] = items.map((item, idx) => ({
+        icon: featureIcons[idx % featureIcons.length],
+        title: item.title,
+        desc: item.desc,
+        category: item.category,
+        highlight: idx === 0
+    }));
     return (
 
         <section id="features" className="relative overflow-hidden pb-20"> {/* bg-gradient-to-br from-gray-900 to-gray-950 */}
@@ -80,9 +36,9 @@ export default function FullFeatures() {
             <div className="relative container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-white mb-4 font-display tracking-tight">
-                        <span className="text-green-600">Smart Features</span> for Modern Business Owners
+                        <span className="text-green-600">{t('fullFeatures.titleLead')}</span> {t('fullFeatures.titleSuffix')}
                     </h2>
-                    <p className="text-xl text-gray-300">Built with advanced technology to help you make better business decisions</p>
+                    <p className="text-xl text-gray-300">{t('fullFeatures.subtitle')}</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">

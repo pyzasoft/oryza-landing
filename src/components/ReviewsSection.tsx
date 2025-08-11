@@ -1,21 +1,23 @@
-const testimonials = [
-    {
-      name: "Early User",
-      business: "Fashion Store Owner",
-      text: "The AI Business Intelligence feature is incredible. I can just ask which products are performing well and get instant answers with charts. It's so intuitive.",
-      metric: "Early Adopter",
-      image: "EU"
-    },
-    {
-      name: "Development Partner",
-      business: "Electronics Retailer",
-      text: "Finally, a system built specifically for Bangladeshi e-commerce. The WooCommerce integration works perfectly and the insights help me focus on what matters.",
-      metric: "Dev Partner",
-      image: "DP"
-    }
-  ];
+import { useTranslation } from 'react-i18next';
+
+type Testimonial = {
+  name: string;
+  business: string;
+  text: string;
+  metric: string;
+  image: string;
+};
 
 export default function ReviewsSection() {
+    const { t } = useTranslation();
+    const raw = t('reviews.testimonials', { returnObjects: true }) as Array<Omit<Testimonial, 'image'>>;
+    const testimonials: Testimonial[] = raw.map((item, idx) => ({
+      name: item.name,
+      business: item.business,
+      text: item.text,
+      metric: item.metric,
+      image: idx === 0 ? 'EU' : 'DP'
+    }));
     return (
         <section className="relative overflow-hidden pb-20">
         {/* Background glows */}
@@ -26,9 +28,9 @@ export default function ReviewsSection() {
         <div className="relative container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4 font-display tracking-tight">
-              Early <span className="text-green-600">Feedback</span>
+              {t('reviews.headingLead')} <span className="text-green-600">{t('reviews.headingHighlight')}</span>
             </h2>
-            <p className="text-xl text-gray-300">What our early users and development partners are saying</p>
+            <p className="text-xl text-gray-300">{t('reviews.subtitle')}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

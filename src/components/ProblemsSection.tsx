@@ -1,61 +1,40 @@
 import { DollarSign, BarChart3, Clock, AlertTriangle, Package, Users, Zap } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
-const painPoints = [
-    {
-        icon: DollarSign,
-        title: "Profit-Loss Confusion",
-        desc: "You're selling products but can't tell which ones are actually profitable.",
-        color: "text-red-500",
-        bgGradient: "from-red-600/20 to-red-800/10",
-        intensity: "High Impact"
-    },
-    {
-        icon: BarChart3,
-        title: "Data Scattered Everywhere",
-        desc: "Order data in one place, inventory in another, payments somewhere else.",
-        color: "text-orange-500",
-        bgGradient: "from-orange-600/20 to-orange-800/10",
-        intensity: "Critical"
-    },
-    {
-        icon: Clock,
-        title: "Manual Reporting Takes Hours",
-        desc: "Spending entire days creating reports instead of growing your business.",
-        color: "text-yellow-500",
-        bgGradient: "from-yellow-600/20 to-yellow-800/10",
-        intensity: "Time Drain"
-    },
-    {
-        icon: AlertTriangle,
-        title: "No Business Intelligence",
-        desc: "Making decisions based on gut feeling instead of real data insights.",
-        color: "text-blue-500",
-        bgGradient: "from-blue-600/20 to-blue-800/10",
-        intensity: "Risk Factor"
-    },
-    {
-        icon: Package,
-        title: "Inventory Blindness",
-        desc: "Don't know what's selling fast, what's stuck, or when to reorder.",
-        color: "text-purple-500",
-        bgGradient: "from-purple-600/20 to-purple-800/10",
-        intensity: "Stock Issues"
-    },
-    {
-        icon: Users,
-        title: "Team Performance Mystery",
-        desc: "Can't track who's performing well and who needs support.",
-        color: "text-green-500",
-        bgGradient: "from-green-600/20 to-green-800/10",
-        intensity: "Team Blind Spot"
-    }
-];
+type PainPoint = {
+  icon: any;
+  title: string;
+  desc: string;
+  color: string;
+  bgGradient: string;
+  intensity: string;
+};
 
-// Duplicate the array to create seamless infinite scroll
-const infinitePainPoints = [...painPoints, ...painPoints];
+const iconByIndex = [DollarSign, BarChart3, Clock, AlertTriangle, Package, Users];
+
+// Note: will be created after computing localized painPoints
+let infinitePainPoints: PainPoint[] = [];
 
 export default function ProblemsSection() {
+    const { t } = useTranslation();
+    const painPointsData = t('problems.painPoints', { returnObjects: true }) as Array<Pick<PainPoint, 'title' | 'desc' | 'intensity'>>;
+    const painPoints: PainPoint[] = painPointsData.map((p, idx) => ({
+        icon: iconByIndex[idx % iconByIndex.length],
+        title: p.title,
+        desc: p.desc,
+        intensity: p.intensity,
+        color: ["text-red-500","text-orange-500","text-yellow-500","text-blue-500","text-purple-500","text-green-500"][idx % 6],
+        bgGradient: [
+          "from-red-600/20 to-red-800/10",
+          "from-orange-600/20 to-orange-800/10",
+          "from-yellow-600/20 to-yellow-800/10",
+          "from-blue-600/20 to-blue-800/10",
+          "from-purple-600/20 to-purple-800/10",
+          "from-green-600/20 to-green-800/10"
+        ][idx % 6]
+    }));
+    infinitePainPoints = [...painPoints, ...painPoints];
     return (
         <section className="relative overflow-hidden py-20" id='problems'>
             {/* Dark emphasis background */}
@@ -71,13 +50,13 @@ export default function ProblemsSection() {
                         <span className="text-red-300 font-medium text-sm">Pain Points Analysis</span>
                     </div> */}
                     <div className="text-3xl font-bold text-white mb-6 font-display tracking-tight leading-tight">
-                        Running an E-commerce Business<br />
+                        {t('problems.headingLead')}<br />
                         <span className="text-red-500 relative">
-                            Shouldn't Be This Hard
+                            {t('problems.headingHighlight')}
                             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-500/60 via-red-400/80 to-red-500/60 rounded-full"></span>
                         </span>
                     </div>
-                    <span className="text-xl text-gray-300">Every day, these challenges drain your time, money, and energy</span>
+                    <span className="text-xl text-gray-300">{t('problems.subtitle')}</span>
                 </div>
 
                 {/* Horizontal Infinite Scroll Container */}
@@ -166,7 +145,7 @@ export default function ProblemsSection() {
                                                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse delay-100"></div>
                                                 <div className="w-2 h-2 bg-red-300 rounded-full animate-pulse delay-200"></div>
                                             </div>
-                                            <span className="ml-2 text-red-400 text-xs font-medium">Active Pain Point</span>
+                                            <span className="ml-2 text-red-400 text-xs font-medium">{t('problems.activeLabel')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -177,10 +156,10 @@ export default function ProblemsSection() {
 
                 {/* Call to action */}
                 <div className="text-center mt-12">
-                    <p className="text-gray-400 mb-4">Sound familiar? You're not alone.</p>
+                    <p className="text-gray-400 mb-4">{t('problems.ctaLead')}</p>
                     <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600/20 to-orange-600/20 border border-red-500/30 rounded-xl">
                         <Zap className="w-5 h-5 text-yellow-400 mr-2" />
-                        <span className="text-white font-medium">There's a better way to run your business</span>
+                        <span className="text-white font-medium">{t('problems.ctaText')}</span>
                     </div>
                 </div>
             </div>

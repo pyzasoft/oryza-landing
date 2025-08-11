@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "features": "Features",
+    "whatsapp": "WhatsApp Us"
+  },
+  "hero": {
+    "titleLine1": "Stop Guessing.",
+    "titleLine2Part1": "Start",
+    "titleLine2Part2": "Growing",
+    "titleLine2Suffix": "Your Business.",
+    "subtitle": "The first e-commerce management system with AI Business Intelligence.",
+    "ctaPrimary": "AI Business Intelligence",
+    "ctaSecondary": "Schedule a Demo",
+    "scroll": "Scroll to bottom"
+  },
+  "stats": {
+    "aiPowered": "AI-Powered",
+    "aiPoweredDesc": "Smart Analytics & Insights",
+    "realTime": "Real-time",
+    "realTimeDesc": "Live Business Monitoring",
+    "complete": "Complete",
+    "completeDesc": "End-to-End Management",
+    "fastSetup": "Fast Setup",
+    "fastSetupDesc": "Easy to start"
+  },
+  "cta": {
+    "heading": "Ready to Experience AI-Powered Analytics?",
+    "text": "Join our early adopters and be among the first to revolutionize your e-commerce business with AI-powered insights.",
+    "scheduleDemo": "Schedule a Demo",
+    "fastSetup": "Fast Setup",
+    "aiAnalytics": "AI-Powered Analytics",
+    "dataMigration": "Data Migration"
+  },
+  "reviews": {
+    "headingLead": "Early",
+    "headingHighlight": "Feedback",
+    "subtitle": "What our early users and development partners are saying",
+    "testimonials": [
+      {
+        "name": "Early User",
+        "business": "Footwear Store Owner",
+        "text": "The AI Business Intelligence feature is incredible. I can just ask which products are performing well and get instant answers with charts. It's so intuitive.",
+        "metric": "Early Adopter"
+      },
+      {
+        "name": "Development Partner",
+        "business": "Organic Hair Care Business Owner",
+        "text": "Finally, a system built specifically for Bangladeshi e-commerce. The WooCommerce integration works perfectly and the insights help me focus on what matters.",
+        "metric": "Dev Partner"
+      }
+    ]
+  }
+  ,
+  "problems": {
+    "headingLead": "Running an E-commerce Business",
+    "headingHighlight": "Shouldn't Be This Hard",
+    "subtitle": "Every day, these challenges drain your time, money, and energy",
+    "activeLabel": "Active Pain Point",
+    "ctaLead": "Sound familiar? You're not alone.",
+    "ctaText": "There's a better way to run your business",
+    "painPoints": [
+      {
+        "title": "Profit-Loss Confusion",
+        "desc": "You're selling products but can't tell which ones are actually profitable.",
+        "intensity": "High Impact"
+      },
+      {
+        "title": "Data Scattered Everywhere",
+        "desc": "Order data in one place, inventory in another, payments somewhere else.",
+        "intensity": "Critical"
+      },
+      {
+        "title": "Manual Reporting Takes Hours",
+        "desc": "Spending entire days creating reports instead of growing your business.",
+        "intensity": "Time Drain"
+      },
+      {
+        "title": "No Business Intelligence",
+        "desc": "Making decisions based on gut feeling instead of real data insights.",
+        "intensity": "Risk Factor"
+      },
+      {
+        "title": "Inventory Blindness",
+        "desc": "Don't know what's selling fast, what's stuck, or when to reorder.",
+        "intensity": "Stock Issues"
+      },
+      {
+        "title": "Team Performance Mystery",
+        "desc": "Can't track who's performing well and who needs support.",
+        "intensity": "Team Blind Spot"
+      }
+    ]
+  },
+  "overview": {
+    "brand": "ORYZA",
+    "headingLead": "Our Complete",
+    "headingHighlight": "E-commerce Management",
+    "headingSuffix": "System",
+    "subtitle": "Everything you need to run and scale your online business",
+    "cards": {
+      "integrationTitle": "WooCommerce Integration",
+      "integrationDesc": "Automatic order fetching",
+      "teamTitle": "Team Assignment",
+      "teamDesc": "Assign orders to members",
+      "lifecycleTitle": "Order Lifecycle",
+      "lifecycleDesc": "End-to-end tracking",
+      "reportsTitle": "Business Reports",
+      "reportsDesc": "Comprehensive analytics",
+      "aiTitle": "AI Dashboard",
+      "aiDesc": "Smart analytics",
+      "stockTitle": "Stock Management",
+      "stockDesc": "Inventory tracking",
+      "profitTitle": "Profit Analysis",
+      "profitDesc": "Real-time calculations",
+      "bulkDeliveryTitle": "Bulk Delivery",
+      "bulkDeliveryDesc": "Multiple courier assign",
+      "customerHistoryTitle": "Customer History",
+      "customerHistoryDesc": "Complete order records",
+      "courierIntegrationTitle": "Courier Integration",
+      "courierIntegrationDesc": "Direct sending",
+      "bulkInvoiceTitle": "Bulk Invoice",
+      "bulkInvoiceDesc": "Mass generation",
+      "printMemoTitle": "Print & Memo",
+      "printMemoDesc": "Delivery slips & memos"
+    }
+  },
+  "fullFeatures": {
+    "titleLead": "Smart Features",
+    "titleSuffix": "for Modern Business Owners",
+    "subtitle": "Built with advanced technology to help you make better business decisions",
+    "items": [
+      {
+        "title": "AI Business Intelligence",
+        "desc": "Ask questions in natural language and get instant charts, insights, and analytics about your business performance, sales trends, and profitability.",
+        "category": "AI & Analytics"
+      },
+      {
+        "title": "Complete Order Lifecycle Management",
+        "desc": "Fetch orders from WooCommerce, assign team members, track from placement to delivery with automated workflows and status updates.",
+        "category": "Order Management"
+      },
+      {
+        "title": "Team Management & Performance",
+        "desc": "Assign orders to team members, track individual performance metrics, conversion rates, and productivity with detailed analytics.",
+        "category": "Team Management"
+      },
+      {
+        "title": "Advanced Reporting & Profit Analysis",
+        "desc": "Generate comprehensive reports on sales, profit/loss, inventory turnover, and business performance with exportable data.",
+        "category": "Analytics & Reports"
+      },
+      {
+        "title": "Smart Inventory & Stock Management",
+        "desc": "Real-time stock tracking, low inventory alerts, automatic reorder suggestions, and inventory optimization recommendations.",
+        "category": "Inventory"
+      },
+      {
+        "title": "Bulk Delivery Partner Operations",
+        "desc": "Assign multiple orders to delivery partners in bulk, track shipments, and manage courier partnerships with Pathao, RedX, SA Paribahan.",
+        "category": "Logistics"
+      },
+      {
+        "title": "Customer Order History & CRM",
+        "desc": "Complete customer profiles with order history, purchase patterns, and personalized insights for better customer relationship management.",
+        "category": "Customer Management"
+      },
+      {
+        "title": "Automated Invoicing & Documentation",
+        "desc": "Bulk invoice generation, delivery slip printing, memo creation, and automated documentation for seamless order processing.",
+        "category": "Documentation"
+      },
+      {
+        "title": "Fraud Detection & Security",
+        "desc": "Duplicate order detection, fraud prevention, and security measures to protect your business from fake orders.",
+        "category": "Security"
+      }
+    ]
+  },
+  "ai": {
+    "heading": "AI Business Intelligence",
+    "subtitle": "Ask natural language questions and get instant visual insights from your real business data",
+    "headerTitle": "AI Business Intelligence",
+    "headerSubtitle": "Natural language analytics • Real-time insights • AI-powered analytics",
+    "inputSample": "show me yesterday's top selling products",
+    "analyze": "Analyze",
+    "resultsTable": "Results Table",
+    "exportCsv": "Export CSV",
+    "searchPlaceholder": "Search results...",
+    "allColumns": "All Columns",
+    "chartTitle": "Top Selling Products Yesterday",
+    "chartMeta": "Chart Type: BarChart | Sales Performance",
+    "tableShowing": "Showing 1 to 10 of 16 results",
+    "tablePage": "Page 1 of 2",
+    "features": {
+      "queriesTitle": "Natural Language Queries",
+      "queriesDesc": "Ask questions just like you would ask a human analyst",
+      "vizTitle": "Instant Visualizations",
+      "vizDesc": "Get beautiful charts and graphs generated automatically",
+      "tablesTitle": "Exportable Data Tables",
+      "tablesDesc": "Download your results as CSV for further analysis"
+    }
+  }
+}
+
+

@@ -1,7 +1,9 @@
 import { Package, Users, TrendingUp, BarChart3, Bot, DollarSign, Truck, FileText } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from 'react-i18next';
 
 export default function ComprehensiveFeaturesOverview() {
+    const { t } = useTranslation();
     return (
         <section className="relative overflow-hidden pb-20">
             {/* Subtle section highlight */}
@@ -12,11 +14,11 @@ export default function ComprehensiveFeaturesOverview() {
             <div className="relative container mx-auto px-6">
                 <div className="text-center mb-16">
                     {/* <span className="text-3xl md:text-3xl font-bold text-white mb-4">The Solution to Your Problems?</span> */}
-                    <span className="text-5xl md:text-7xl font-display tracking-tight font-bold text-white mb-4">ORYZA</span>
+                    <span className="text-5xl md:text-7xl font-display tracking-tight font-bold text-white mb-4">{t('overview.brand')}</span>
                     <h2 className="text-3xl font-bold text-white mb-4">
-                        Our Complete <span className="text-green-600">E-commerce Management</span> System
+                        {t('overview.headingLead')} <span className="text-green-600">{t('overview.headingHighlight')}</span> {t('overview.headingSuffix')}
                     </h2>
-                    <p className="text-xl text-gray-300">Everything you need to run and scale your online business</p>
+                    <p className="text-xl text-gray-300">{t('overview.subtitle')}</p>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -35,8 +37,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Package className="w-12 h-12 text-blue-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">WooCommerce Integration</h3>
-                        <p className="text-xs text-gray-300">Automatic order fetching</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.integrationTitle', { defaultValue: 'WooCommerce Integration' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.integrationDesc', { defaultValue: 'Automatic order fetching' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -54,8 +56,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Users className="w-12 h-12 text-green-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Team Assignment</h3>
-                        <p className="text-xs text-gray-300">Assign orders to members</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.teamTitle', { defaultValue: 'Team Assignment' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.teamDesc', { defaultValue: 'Assign orders to members' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -73,8 +75,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <TrendingUp className="w-12 h-12 text-teal-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Order Lifecycle</h3>
-                        <p className="text-xs text-gray-300">End-to-end tracking</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.lifecycleTitle', { defaultValue: 'Order Lifecycle' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.lifecycleDesc', { defaultValue: 'End-to-end tracking' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -92,8 +94,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <BarChart3 className="w-12 h-12 text-red-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Business Reports</h3>
-                        <p className="text-xs text-gray-300">Comprehensive analytics</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.reportsTitle', { defaultValue: 'Business Reports' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.reportsDesc', { defaultValue: 'Comprehensive analytics' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -111,8 +113,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Bot className="w-12 h-12 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">AI Dashboard</h3>
-                        <p className="text-xs text-gray-300">Smart analytics</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.aiTitle', { defaultValue: 'AI Dashboard' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.aiDesc', { defaultValue: 'Smart analytics' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -130,8 +132,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Package className="w-12 h-12 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Stock Management</h3>
-                        <p className="text-xs text-gray-300">Inventory tracking</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.stockTitle', { defaultValue: 'Stock Management' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.stockDesc', { defaultValue: 'Inventory tracking' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -150,8 +152,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <DollarSign className="w-12 h-12 text-yellow-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Profit Analysis</h3>
-                        <p className="text-xs text-gray-300">Real-time calculations</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.profitTitle', { defaultValue: 'Profit Analysis' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.profitDesc', { defaultValue: 'Real-time calculations' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -169,8 +171,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Truck className="w-12 h-12 text-indigo-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Bulk Delivery</h3>
-                        <p className="text-xs text-gray-300">Multiple courier assign</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.bulkDeliveryTitle', { defaultValue: 'Bulk Delivery' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.bulkDeliveryDesc', { defaultValue: 'Multiple courier assign' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -188,8 +190,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Users className="w-12 h-12 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Customer History</h3>
-                        <p className="text-xs text-gray-300">Complete order records</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.customerHistoryTitle', { defaultValue: 'Customer History' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.customerHistoryDesc', { defaultValue: 'Complete order records' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -207,8 +209,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <Truck className="w-12 h-12 text-teal-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Courier Integration</h3>
-                        <p className="text-xs text-gray-300">Direct sending</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.courierIntegrationTitle', { defaultValue: 'Courier Integration' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.courierIntegrationDesc', { defaultValue: 'Direct sending' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -226,8 +228,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <FileText className="w-12 h-12 text-gray-300 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Bulk Invoice</h3>
-                        <p className="text-xs text-gray-300">Mass generation</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.bulkInvoiceTitle', { defaultValue: 'Bulk Invoice' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.bulkInvoiceDesc', { defaultValue: 'Mass generation' })}</p>
                     </div>
 
                     <div className="group bg-white/5 backdrop-blur-sm p-4 py-16 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/10 flex flex-col h-full hover:bg-white/8">
@@ -245,8 +247,8 @@ export default function ComprehensiveFeaturesOverview() {
                         >
                             <FileText className="w-12 h-12 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
                         </motion.div>
-                        <h3 className="font-bold text-white text-sm mb-1">Print & Memo</h3>
-                        <p className="text-xs text-gray-300">Delivery slips & memos</p>
+                        <h3 className="font-bold text-white text-sm mb-1">{t('overview.cards.printMemoTitle', { defaultValue: 'Print & Memo' })}</h3>
+                        <p className="text-xs text-gray-300">{t('overview.cards.printMemoDesc', { defaultValue: 'Delivery slips & memos' })}</p>
                     </div>
                 </div>
             </div>
